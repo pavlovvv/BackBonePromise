@@ -1,14 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ProfilePage from '@components/profile/ProfilePage';
-import Layout from './MainLayout';
+import LogIn from "./components/auth/logIn/logIn.tsx";
+import "./App.css";
 
 function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/" element={<MainLayout />}>
-                    <Route index element={<ProfilePage />} />
-                </Route>
+                    <Route index element={<LogIn />} />
             </Routes>
         </Router>
     );
