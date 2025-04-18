@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 186px);
-  position: relative;
 
   @media (width < 1280px) {
     min-height: calc(100vh - 136px);
@@ -15,7 +14,6 @@
 
   * {
     z-index: 2;
-    position: relative;
   }
 }
 
@@ -23,7 +21,7 @@
   padding: 40px;
   background: #fff;
   border-radius: 14px;
-  margin: 84px 0 99px;
+  margin: auto;
   z-index: 10;
 
   @media (width < 768px) {
@@ -46,6 +44,7 @@
   font-weight: 400;
   font-size: 64px;
   line-height: 100%;
+  margin-top: 20px;
 
 
   @media (width < 768px) {
@@ -200,7 +199,11 @@
 .disconnector__line {
   flex: 1;
   height: 1px;
-  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2392A1A8FF' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='56' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1' preserveAspectRatio='none'>\
+    <rect width='100%' height='1' fill='none' stroke='%2392A1A8' stroke-opacity='1'\
+          stroke-width='1' stroke-dasharray='6,14' stroke-linecap='square'/>\
+  </svg>");
 }
 
 .disconnector__title {
@@ -381,7 +384,6 @@
 
 
   @media (width < 768px) {
-    top: -35px;
     left: 30px;
   }
 }

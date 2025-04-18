@@ -1,40 +1,35 @@
 import { TextField, InputAdornment, IconButton, OutlinedInput } from "@mui/material"
 import styles from "../auth.module.scss"
 import { useState } from "react"
-// import visabilityOff from "@public/visability-off.png"
-// import visabilityOn from "@public/visability-on.png"
-// import box from "@public/box.png"
-// import boxChecked from "@public/box-checked.png"
 import { useForm, Controller } from "react-hook-form";
-// import { useGoogleLogin } from "@react-oauth/google";
-import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
-import googleIcon from "../../../../public/google.svg"
-import facebookIcon from "../../../../public/facebook.svg"
 import { Link } from "react-router-dom"
 import logoSrc from "../../../../public/logo-1.svg"
 import visabilityIconSrc from "../../../../public/visibility-icon.svg"
 
-interface ILogInInputvalues {
+interface ISignUpInputvalues {
     email: string;
     password: string;
     showPassword: boolean;
     remember: boolean;
+    name: string;
 }
 
-export default function LogIn() {
-    const { control, handleSubmit, formState: { errors, isValid } } = useForm<ILogInInputvalues>({
+export default function SignUp() {
+    const { control, handleSubmit, formState: { errors, isValid } } = useForm<ISignUpInputvalues>({
         mode: "onBlur",
         defaultValues: {
             email: "",
             password: "",
+            name: ""
         },
     });
 
-    const [values, setValues] = useState<ILogInInputvalues>({
+    const [values, setValues] = useState<ISignUpInputvalues>({
         email: "",
         password: "",
+        name: "",
         showPassword: false,
-        remember: false
+        remember: false,
     });
 
     // const login = useGoogleLogin({
@@ -42,7 +37,7 @@ export default function LogIn() {
     //     flow: 'auth-code',
     // });
 
-    const onSubmit = (data: ILogInInputvalues) => {
+    const onSubmit = (data: ISignUpInputvalues) => {
         console.log("Form Data:", data);
     };
 
@@ -57,36 +52,41 @@ export default function LogIn() {
         event.preventDefault();
     };
 
-    const handleFacebookResponse = (response: unknown) => {
-        console.log("Facebook Login Response:", response);
-    };
-
     return <>
         <div className={`${styles.wrapper} ${styles["wrapper_sign-in"]}`}>
             <section className={`${styles.sign} ${styles.account_in}`}>
-                <h1 className={styles.account__heading}>Log in</h1>
+                <h1 className={styles.account__heading}>Create account</h1>
 
-                <div style={{display: "flex", justifyContent: "space-between", columnGap: 16}}>
-                <button onClick={() => {}} className={styles.account__button_2}><img src={googleIcon} alt="google-icon" /><span>Google</span></button>
-
-                <FacebookLogin
-                    appId="facebook_app_id"
-                    autoLoad={false}
-                    fields="name,email,picture"
-                    callback={handleFacebookResponse}
-                    render={renderProps => (
-                        <button onClick={renderProps.onClick} className={styles.account__button_2}><img src={facebookIcon} alt="facebook-icon" /><span>Facebook</span></button>
-                    )}
-                />
-                </div>
-
-                <div className={styles["disconnector"]}>
-                    <div className={styles["disconnector__line"]} />
-                    <div className={styles["disconnector__title"] + ' ' + styles["account__item-label"]}>or</div>
-                    <div className={styles["disconnector__line"]} />
-                </div>
 
                 <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className={styles.account__item}>
+                        <div>
+                            <label htmlFor="name" className={styles["account__item-label"]}>Full name</label>
+                            <Controller
+                                name="name"
+                                control={control}
+                                rules={{
+                                    required: "Full name is required.",
+                                    pattern: {
+                                        value: /^[A-Za-z\s]+$/,
+                                        message: "Name can only contain letters and spaces.",
+                                    },
+                                }}
+                                render={({ field }) => (
+                                    <TextField
+                                        {...field}
+                                        fullWidth
+                                        placeholder="Enter your name"
+                                        variant="outlined"
+                                        error={!!errors.name}
+                                        helperText={errors.name?.message}
+                                        className={`${styles["account__item-texfiled"]}`}
+                                    />
+                                )}
+                            />
+                        </div>
+                    </div>
+
                     <div className={styles.account__item}>
                         <div>
                             <label htmlFor="email" className={styles["account__item-label"]}>Email</label>
@@ -135,6 +135,7 @@ export default function LogIn() {
                                         type={values.showPassword ? 'text' : 'password'}
                                         fullWidth
                                         error={!!errors.password}
+                                        placeholder={"Create password"}
                                         // slotProps={{
                                         //     background: "#fff", marginTop: "8px", border: "1px solid #C6D4DB", borderRadius: "8px"
                                         // }}
@@ -156,14 +157,15 @@ export default function LogIn() {
                         </div>
                     </div>
 
-                    <div className={`${styles.account__item} ${styles["account__item-terms"]}`}>
-                        <Link to={"/auth/forgot-password"} className={styles["account__item-terms_link"]}>Forgot password?</Link>
+                    <div className={`${styles.account__item} ${styles["account__item-terms"]}`} style={{fontSize: '14px', color: '#92A1A8'}}>
+                        Between 8 and 20 characters <br/>
+                        1 lowercase letter, 1 uppercase letter, 1 digit
                     </div>
 
                     <button type="submit" className={styles.account__button} disabled={!isValid} style={{height: 44, background: "#ED805B", color: "#fff"}}>Continue</button>
                 </form>
 
-                <div className={styles["account__item-other-option"]}>Don't have an account? <Link to={"/auth/sign-up"} className={styles["account__item-terms_link"]}>Sign up </Link></div>
+                <div className={styles["account__item-other-option"]}>Already have an account? <Link to={"/"} className={styles["account__item-terms_link"]}>Log in</Link></div>
             </section>
 
             <div className={styles["circle-1"]}></div>
