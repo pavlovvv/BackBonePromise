@@ -1,0 +1,71 @@
+.nav {
+  padding: 24px 24px 0 40px;
+  max-width: 246px;
+
+  &__logo {
+    display: block;
+    width: 100%;
+  }
+
+  ul {
+    list-style: none;
+    padding-top: 32px;
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+    width: 182px;
+
+    li a {
+      display: flex;
+      transition: background .3s ease;
+      cursor: pointer;
+      margin-bottom: 8px;
+      align-items: center;
+      gap: 8px;
+      border-radius: 8px;
+      padding: 8px;
+      position: relative;
+      max-width: 166px;
+
+      &:hover {
+        background: #ED805B;
+
+        span {
+          color: #fff;
+        }
+
+        & > img:last-child {
+          filter: invert(1) brightness(1.2) contrast(1.1);
+        }
+      }
+
+      & > div:first-child {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #FFE5D7;
+        width: 40px;
+        height: 40px;
+        border-radius: 4px;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #1D1D1F;
+        transition: color .3s ease;
+        max-width: 95px;
+      }
+
+      & > img:last-child {
+        position: absolute;
+        right: 12px;
+        top: 0;
+        bottom: 0;
+        transform: translate(0, 100%);
+        transition: filter .3s ease;
+      }
+    }
+  }
+}

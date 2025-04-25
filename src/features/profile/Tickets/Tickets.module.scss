@@ -1,0 +1,212 @@
+$error:   #EF4D56;
+$warning: #EDCE54;
+$success: #49AB3A;
+$info:    #6CAFC6;
+
+.wrapper {
+  padding: 24px 40px 24px;
+  width: 100%;
+  max-width: 1194px;
+}
+
+.tickets {
+  padding: 32px 24px 24px 24px;
+  border-radius: 8px;
+  background-color: #E6EFF3;
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 32px;
+
+    h1 {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 100%;
+      color: #1D1D1F;
+    }
+
+    &_grey {
+      color: #92A1A8;
+    }
+
+    & > div {
+      display: flex;
+      column-gap: 8px;
+
+      & > div:first-child {
+        width: 32px;
+        height: 32px;
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+      }
+
+      & > div:nth-child(2) {
+        width: 66px;
+        height: 32px;
+        display: flex;
+        background: #fff;
+        color: #1D1D1F;
+        align-items: center;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        border-radius: 4px;
+        padding-left: 4px;
+      }
+    }
+  }
+
+  &__counters {
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    padding-bottom: 16px;
+
+    & > div {
+      background: #FFFFFF;
+      border-radius: 8px;
+      padding: 36px 24px;
+      display: flex;
+      column-gap: 16px;
+      width: 100%;
+
+      & > div:first-child {
+        width: 36px;
+        height: 36px;
+        margin-top: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px;
+      }
+
+      h4 {
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        color: #1D1D1F;
+        margin: 0;
+      }
+
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        color: #92A1A8;
+      }
+    }
+  }
+
+  &__tableContainer {
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: 8px;
+
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 24px;
+    }
+  }
+}
+
+.ticket-table {
+  &__container {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  &__table {
+    width: 100%;
+    border-collapse: separate;
+    font-family: Arial, sans-serif;
+  }
+
+  &__row {
+    border: 1px solid transparent;
+    border-radius: 8px;
+    transition: border .3s ease;
+    &:hover {
+      border: 1px solid #C6D4DB;
+    }
+  }
+
+  &__header {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #92A1A8;
+    padding-bottom: 20px;
+    text-align: left;
+  }
+
+  &__cell {
+    text-align: left;
+    color: #1D1D1F;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    padding-top: 6px;
+    padding-bottom: 11px;
+  }
+
+  &__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 114px;
+    height: 40px;
+    border-radius: 100px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  &__badge--high {
+    color: $error;
+    border: 1px solid $error;
+  }
+  &__badge--medium {
+    color: $warning;
+    border: 1px solid $warning;
+  }
+  &__badge--low {
+    color: $success;
+    border: 1px solid $success;
+  }
+
+  &__badge--in-progress {
+    color: $info;
+    border: 1px solid $info;
+  }
+  &__badge--open {
+    color: $success;
+    border: 1px solid $success;
+  }
+  &__badge--closed {
+    color: $error;
+    border: 1px solid $error;
+  }
+}
+
+
+.main-button {
+  background-color: #ED805B;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff;
+  border: none;
+  height: 44px;
+  cursor: pointer;
+}
