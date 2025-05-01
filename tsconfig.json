@@ -6,6 +6,11 @@
   ],
   "compilerOptions": {
     "composite": true,
-    "declaration": true
+    "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*":       ["src/*"],
+      "@components/*": ["src/components/*"],
+    }
   }
 }

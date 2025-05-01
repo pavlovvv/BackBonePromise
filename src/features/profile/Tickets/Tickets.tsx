@@ -1,9 +1,5 @@
 import styles from "./Tickets.module.scss"
-import {Sidebar} from '../imports/components'
-import NotificationIconSrc from './assets/notifications.svg'
-import GlobusIconSrc from './assets/Small globe.svg'
-import ArrowDownSrc from './assets/Small arrow_Down.svg'
-import AddIconSrc from './assets/plus.svg'
+import {Sidebar, ClientProfileTop, Button} from '../imports/components'
 import FilterIconSrc from './assets/filter-list.svg'
 import {counters, tickets} from "../constants";
 import {CounterCard} from "./CounterCard/CounterCard";
@@ -17,18 +13,9 @@ export default function Tickets() {
             <Sidebar/>
             <div className={styles.wrapper}>
                 <section className={styles["tickets"]}>
-                    <div className={styles["tickets__top"]}>
-                        <h1><span className={styles["tickets__top_grey"]}>Support -</span> Tickets</h1>
-                        <div>
-                            <div><img src={NotificationIconSrc} alt="notification-icon"/></div>
-
-                            <div>
-                                <img src={GlobusIconSrc} alt=""/>
-                                <span>EN</span>
-                                <img src={ArrowDownSrc} alt=""/>
-                            </div>
-                        </div>
-                    </div>
+                    <ClientProfileTop>
+                        Support - Tickets
+                    </ClientProfileTop>
 
                     <div className={styles['tickets__counters']}>
                         {counters.map(({ id, icon, count, label, bgColor }) => (
@@ -39,10 +26,7 @@ export default function Tickets() {
 
                     <div className={styles["tickets__tableContainer"]}>
                         <div className={styles["tickets__tableContainer-top"]}>
-                            <button className={styles["main-button"]} onClick={(e) => e.preventDefault()}>
-                                <img src={AddIconSrc} alt="+"/>
-                                <span>Create new</span>
-                            </button>
+                            <Button withIcon>Create new</Button>
 
                             <div>
                                 <img src={FilterIconSrc} alt="filter"/>
