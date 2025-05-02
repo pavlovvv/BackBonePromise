@@ -1,5 +1,5 @@
 import styles from "./Tickets/Tickets.module.scss";
-import {Priority, Status, Ticket} from "./types";
+import {DataEntry, Priority, Status, Ticket, RevenueData, Product} from "./types";
 import ChatIconSrc from "./Tickets/assets/chat.svg";
 import ClockIconSrc from "./Tickets/assets/clock.svg";
 import CheckIconSrc from "./Tickets/assets/check.svg";
@@ -34,4 +34,47 @@ export const counters = [
     { id: 'pending', icon: ClockIconSrc, count: 2451, label: 'Pending tickets', bgColor: 'rgba(237,206,84,0.2)' },
     { id: 'closed', icon: CheckIconSrc, count: 1328, label: 'Closed tickets', bgColor: 'rgba(73,171,58,0.2)' },
     { id: 'deleted', icon: DeleteIconSrc, count: 846, label: 'Deleted tickets', bgColor: 'rgba(239,77,86,0.2)' },
+];
+
+export const revenueData: RevenueData = {
+    total: 120000,
+    segments: [
+        {
+            label: 'Subscription revenue',
+            value: 60000,
+            percent: 50,
+            color: '#a2c0e8',
+            children: [
+                { label: 'The debut', value: 30000, percent: 25, color: '#6ca0dd' },
+                { label: 'The atelier', value: 15000, percent: 12.5, color: '#c3d7f1' },
+                { label: 'The runway', value: 15000, percent: 12.5, color: '#dee7f5' },
+            ],
+        },
+        { label: 'Income from clothing sales', value: 20000, percent: 16.7, color: '#67c679' },
+        { label: 'Expected income', value: 20000, percent: 16.7, color: '#e6c84a' },
+    ],
+};
+
+export const donutChartData: DataEntry[] = [
+    { name: 'The debut', value: 27, color: '#6CAFC6' },
+    { name: 'The atelier', value: 49, color: '#EDCE54' },
+    { name: 'The runway', value: 24, color: '#EF4D56' },
+];
+
+export const uData: number[] = [30000, 35000, 45000, 42000, 50000, 55000, 85000, 120000];
+export const pData: number[] = [20000, 25000, 32000, 36000, 30000, 38000, 60000, 85000];
+export const xLabels: string[] = ['01', '05', '10', '12', '15', '20', '25', '30'];
+
+export const products: Product[] = [
+    { id: '#51973', name: 'In a better word T-Shirt', price: 54, oldPrice: 60, discount: '-10%', availability: 'In stock', sell: 450, image: 'https://via.placeholder.com/40x40?text=1' },
+    { id: '#51974', name: 'In a better word T-Shirt', price: 57, availability: 'In stock', sell: 200, image: 'https://via.placeholder.com/40x40?text=2' },
+    { id: '#51975', name: 'In a better word T-Shirt', price: 54, oldPrice: 60, discount: '-10%', availability: 'In stock', sell: 450, image: 'https://via.placeholder.com/40x40?text=1' },
+    { id: '#51976', name: 'In a better word T-Shirt', price: 57, availability: 'In stock', sell: 200, image: 'https://via.placeholder.com/40x40?text=2' },
+    { id: '#51977', name: 'In a better word T-Shirt', price: 54, oldPrice: 60, discount: '-10%', availability: 'In stock', sell: 450, image: 'https://via.placeholder.com/40x40?text=1' },
+    { id: '#51978', name: 'In a better word T-Shirt', price: 57, availability: 'In stock', sell: 200, image: 'https://via.placeholder.com/40x40?text=2' },
+    { id: '#51979', name: 'In a better word T-Shirt', price: 54, oldPrice: 60, discount: '-10%', availability: 'In stock', sell: 450, image: 'https://via.placeholder.com/40x40?text=1' },
+    { id: '#51980', name: 'In a better word T-Shirt', price: 57, availability: 'In stock', sell: 200, image: 'https://via.placeholder.com/40x40?text=2' },
+    { id: '#51981', name: 'In a better word T-Shirt', price: 54, availability: 'Out of stock', sell: 120, image: 'https://via.placeholder.com/40x40?text=3' },
+    { id: '#51982', name: 'In a better word T-Shirt', price: 54, availability: 'In stock', sell: 80, image: 'https://via.placeholder.com/40x40?text=4' },
+    { id: '#51983', name: 'In a better word T-Shirt', price: 54, availability: 'In stock', sell: 80, image: 'https://via.placeholder.com/40x40?text=5' },
 ];
