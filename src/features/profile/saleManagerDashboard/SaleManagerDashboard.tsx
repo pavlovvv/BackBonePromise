@@ -155,6 +155,7 @@ function SaleManagerDashboard(props: HeaderProps) {
           sx={{
             width: { sm: `calc(100% - ${drawerWidth}px)` },
             ml: { sm: `${drawerWidth}px` },
+              display: "none"
           }}
         >
           <Toolbar
