@@ -1,0 +1,38 @@
+.css-1jpc804-MuiDivider-root {
+  display: none;
+}
+
+.css-h1uwv9-MuiPaper-root-MuiAppBar-root {
+  display: none !important;
+}
+
+.css-ssstj6 {
+  padding: 30px 20px 20px 20px;
+  min-height: 100vh;
+  margin-top: 20px;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  background: #E6EFF3;
+  border-radius: 20px;
+}
+
+.css-5spjoc {
+  margin-top: 0 !important;
+  padding: 0 !important;
+}
+
+.css-1lwhjos-MuiPaper-root-MuiDrawer-paper {
+  border: none !important;
+}
+
+.css-1bn13uf-MuiDrawer-docked .MuiDrawer-paper {
+  padding-top: 20px;
+}
+
+.css-1ygil4i-MuiToolbar-root {
+  margin-bottom: 20px;
+}
+
+.DashBoardBlock_text {
+  font: 400 32px "Open Sans";
+}/*# sourceMappingURL=Header.css.map */
