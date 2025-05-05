@@ -43,3 +43,11 @@ export interface Product {
     sell: number;
     image: string;
 }
+
+export interface Comment {
+    avatar: string
+    author: string
+    role?: string
+    datetime: string
+    content: string
+}

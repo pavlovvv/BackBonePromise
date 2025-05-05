@@ -1,0 +1,32 @@
+$error: #EF4D56;
+$warning: #EDCE54;
+$success: #49AB3A;
+$info: #6CAFC6;
+
+.ticket-priority {
+  width: 112px;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1px solid $warning;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 150%;
+
+  &_high {
+    color: $error;
+    border: 1px solid $error;
+  }
+
+  &_medium {
+    color: $warning;
+    border: 1px solid $warning;
+  }
+
+  &_low {
+    color: $success;
+    border: 1px solid $success;
+  }
+}
