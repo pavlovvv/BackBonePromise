@@ -19,7 +19,8 @@ const ClientProfileTop: FC<ClientProfileTopProps> = ({ children }) => {
             <span className={idx < segments.length - 1 ? styles.grey : undefined}>
               {text}
             </span>
-                        {idx < segments.length - 1 && <span className={styles.separator}> - </span>}
+                        {idx < segments.length - 1 &&
+                            <span className={`${styles.separator} ${idx < segments.length - 1 ? styles.grey : undefined}`}> - </span>}
                     </React.Fragment>
                 ))}
             </h1>

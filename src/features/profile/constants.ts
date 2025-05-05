@@ -1,9 +1,11 @@
 import styles from "./Tickets/Tickets.module.scss";
-import {DataEntry, Priority, Status, Ticket, RevenueData, Product} from "./types";
+import {DataEntry, Priority, Status, Ticket, RevenueData, Product, Comment} from "./types";
 import ChatIconSrc from "./Tickets/assets/chat.svg";
 import ClockIconSrc from "./Tickets/assets/clock.svg";
 import CheckIconSrc from "./Tickets/assets/check.svg";
 import DeleteIconSrc from "./Tickets/assets/delete-2.svg";
+import JamesSrc from "@/features/profile/SupportTicketsChat/assets/James.svg";
+import EbigailSrc from "@/features/profile/SupportTicketsChat/assets/Ebigail.svg";
 
 export const priorityMod: Record<Priority, string> = {
     High: styles['ticket-table__badge--high'],
@@ -78,3 +80,21 @@ export const products: Product[] = [
     { id: '#51982', name: 'In a better word T-Shirt', price: 54, availability: 'In stock', sell: 80, image: 'https://via.placeholder.com/40x40?text=4' },
     { id: '#51983', name: 'In a better word T-Shirt', price: 54, availability: 'In stock', sell: 80, image: 'https://via.placeholder.com/40x40?text=5' },
 ];
+
+export const comments: Comment[] = [
+    {
+        avatar: JamesSrc,
+        author: "James Clarke",
+        role: "Administrator",
+        datetime: "20 Dec 2025 – 09:34 AM",
+        content:
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    },
+    {
+        avatar: EbigailSrc,
+        author: "E. Barrett",
+        datetime: "20 Dec 2025 – 10:34 AM",
+        content:
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+    },
+]
