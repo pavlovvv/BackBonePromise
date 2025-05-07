@@ -1,0 +1,16 @@
+.main-button {
+  background-color: #ED805B;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #fff;
+  border: none;
+  height: 44px;
+  cursor: pointer;
+}/*# sourceMappingURL=Button.module.css.map */

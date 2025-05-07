@@ -1,0 +1,127 @@
+.wrapper {
+  padding: 24px 40px 24px;
+  width: 100%;
+  max-width: 1194px;
+}
+
+.tickets {
+  padding: 32px 24px 24px 24px;
+  border-radius: 8px;
+  background-color: #E6EFF3;
+}
+.tickets__counters {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+.tickets__counters > div {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 36px 24px;
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  width: 100%;
+}
+.tickets__counters > div > div:first-child {
+  width: 36px;
+  height: 36px;
+  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+}
+.tickets__counters > div h4 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #1D1D1F;
+  margin: 0;
+}
+.tickets__counters > div span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #92A1A8;
+}
+.tickets__tableContainer {
+  background: #FFFFFF;
+  padding: 24px;
+  border-radius: 8px;
+}
+.tickets__tableContainer-top {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+.ticket-table__container {
+  width: 100%;
+  overflow-x: auto;
+}
+.ticket-table__table {
+  width: 100%;
+  border-collapse: separate;
+  font-family: Arial, sans-serif;
+}
+.ticket-table__row {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+}
+.ticket-table__row:hover {
+  border: 1px solid #C6D4DB;
+}
+.ticket-table__header {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #92A1A8;
+  padding-bottom: 20px;
+  text-align: left;
+}
+.ticket-table__cell {
+  text-align: left;
+  color: #1D1D1F;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  padding-top: 6px;
+  padding-bottom: 11px;
+}
+.ticket-table__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 114px;
+  height: 40px;
+  border-radius: 100px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.ticket-table__badge--high {
+  color: #EF4D56;
+  border: 1px solid #EF4D56;
+}
+.ticket-table__badge--medium {
+  color: #EDCE54;
+  border: 1px solid #EDCE54;
+}
+.ticket-table__badge--low {
+  color: #49AB3A;
+  border: 1px solid #49AB3A;
+}
+.ticket-table__badge--in-progress {
+  color: #6CAFC6;
+  border: 1px solid #6CAFC6;
+}
+.ticket-table__badge--open {
+  color: #49AB3A;
+  border: 1px solid #49AB3A;
+}
+.ticket-table__badge--closed {
+  color: #EF4D56;
+  border: 1px solid #EF4D56;
+}/*# sourceMappingURL=Tickets.module.css.map */

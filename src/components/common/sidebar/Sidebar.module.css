@@ -1,0 +1,62 @@
+.nav {
+  padding: 24px 24px 0 40px;
+  max-width: 246px;
+}
+.nav__logo {
+  display: block;
+  width: 100%;
+}
+.nav ul {
+  list-style: none;
+  padding-top: 32px;
+  width: 100%;
+  padding-left: 0;
+  margin: 0;
+  width: 182px;
+}
+.nav ul li a {
+  display: flex;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 8px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 8px;
+  position: relative;
+  max-width: 166px;
+}
+.nav ul li a:hover {
+  background: #ED805B;
+}
+.nav ul li a:hover span {
+  color: #fff;
+}
+.nav ul li a:hover > img:last-child {
+  filter: invert(1) brightness(1.2) contrast(1.1);
+}
+.nav ul li a > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #FFE5D7;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+.nav ul li a span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #1D1D1F;
+  transition: color 0.3s ease;
+  max-width: 95px;
+}
+.nav ul li a > img:last-child {
+  position: absolute;
+  right: 12px;
+  top: 0;
+  bottom: 0;
+  transform: translate(0, 100%);
+  transition: filter 0.3s ease;
+}/*# sourceMappingURL=Sidebar.module.css.map */

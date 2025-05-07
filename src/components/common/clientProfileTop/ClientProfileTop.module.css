@@ -1,0 +1,44 @@
+.core {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+}
+.core h1 {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  color: #1D1D1F;
+  font-family: "PT serif", serif;
+}
+.core > div {
+  display: flex;
+  -moz-column-gap: 8px;
+       column-gap: 8px;
+}
+.core > div > div:first-child {
+  width: 32px;
+  height: 32px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+.core > div > div:nth-child(2) {
+  width: 66px;
+  height: 32px;
+  display: flex;
+  background: #fff;
+  color: #1D1D1F;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  border-radius: 4px;
+  padding-left: 4px;
+}
+
+.grey {
+  color: #92A1A8;
+}/*# sourceMappingURL=ClientProfileTop.module.css.map */
