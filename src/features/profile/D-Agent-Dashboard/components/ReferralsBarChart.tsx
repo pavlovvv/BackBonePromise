@@ -142,7 +142,7 @@ const ReferralsChart: FC = () => {
       style={{
         height:"100%",
         width:"100%",
-        backgroundColor: '#F8FAFC',
+        backgroundColor: '#ffff',
         borderRadius: '16px',
         padding: '16px',
         boxShadow: '0 1px 3px rgba(0,0,0,0.1)',
@@ -175,7 +175,6 @@ const ReferralsChart: FC = () => {
         </Select>
       </div>
 
-      {/* BarChart з окремими серіями */}
       <BarChart
         xAxis={[
           {
@@ -186,11 +185,11 @@ const ReferralsChart: FC = () => {
         ]}
         yAxis={[
             {
-              width: 60, // досить місця для чисел
+              width: 60, 
             },
           ]}
           margin={{
-            left: -18,  // дає простір для чисел
+            left: -18,  
             right: 10,
             top: 20,
             bottom: -10,
