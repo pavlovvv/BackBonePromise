@@ -1,26 +1,11 @@
 import {FormControl, MenuItem, Select, SelectChangeEvent, SelectProps} from "@mui/material";
 import {useState} from "react";
-import ArrowIconSrc from "@/features/profile/SupportTicketsChat/assets/ArrowBottom.svg";
 import {styled} from "@mui/system";
+import {PRIORITY_OPTIONS} from "@components/common/select/constants.ts";
+import {DropdownIcon} from "@components/common/select/DropDownIcon.tsx";
 
-type TicketStatus = "Open" | "In Progress" | "Close"
 
-const STATUS_OPTIONS: Array<{ value: TicketStatus; label: string; color: string }> = [
-    {value: "Open", label: "Open", color: "#49AB3A"},
-    {value: "In Progress", label: "In Progress", color: "#6CAFC6"},
-    {value: "Close", label: "Close", color: "#EF4D56"},
-]
-
-const DropdownIcon = (props: { className?: string }) => (
-    <img
-        {...props}
-        src={ArrowIconSrc}
-        alt="arrow"
-        style={{width: 24, height: 24, display: 'block', pointerEvents: 'none'}}
-    />
-);
-
-const StatusSelectComponent = styled(Select)<SelectProps<'Open' | 'In Progress' | 'Close'>>(
+const StatusSelectComponent = styled(Select)<SelectProps<"High" | "Medium" | "Low">>(
     () => ({
         minWidth: 232,
         borderRadius: 6,
@@ -50,13 +35,13 @@ const StatusSelectComponent = styled(Select)<SelectProps<'Open' | 'In Progress' 
 );
 
 
-export default function StatusSelect() {
-    const [status, setStatus] = useState<'Open' | 'In Progress' | 'Close'>('Open');
+export default function PrioritySelect() {
+    const [status, setStatus] = useState<"High" | "Medium" | "Low">('High');
 
     const handleStatusChange: SelectProps['onChange'] = (
         event: SelectChangeEvent<unknown>
     ) => {
-        setStatus(event.target.value as 'Open' | 'In Progress' | 'Close');
+        setStatus(event.target.value as "High" | "Medium" | "Low");
     };
 
 
@@ -67,7 +52,7 @@ export default function StatusSelect() {
                 onChange={handleStatusChange}
                 IconComponent={DropdownIcon}
             >
-                {STATUS_OPTIONS.map(({value, label, color}) => (
+                {PRIORITY_OPTIONS.map(({value, label, color}) => (
                     <MenuItem key={value} value={value}>
                         <span style={{color}}>{label}</span>
                     </MenuItem>
