@@ -4,10 +4,9 @@ import downloadIconSrc from './assets/download.svg'
 import folderIconSrc from "./assets/folder.svg"
 import {ChangeEvent, useState} from "react";
 import FolderPlusIconSrc from "./assets/Folder_plus.svg"
-import StatusSelect from "@/features/profile/SupportTicketsChat/StatusSelect/StatusSelect.tsx";
 import {CommentItem} from "@/features/profile/SupportTicketsChat/CommentItem/CommentItem.tsx";
 import {comments} from "@/features/profile/constants.ts";
-import {PriorityBadge, StatusBadge} from "../imports/components";
+import {PriorityBadge, StatusBadge, StatusSelect} from "../imports/components";
 
 export default function SupportTicketsChat() {
     const [commentText, setCommentText] = useState("")

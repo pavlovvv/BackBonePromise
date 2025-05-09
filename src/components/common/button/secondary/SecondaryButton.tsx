@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from './Button.module.scss';
-import AddIconSrc from './assets/plus.svg';
+import styles from './SecondaryButton.module.scss';
+import AddIconSrc from '../assets/Folder_plus.svg';
 
 interface CreateButtonProps {
     children: string;
@@ -8,7 +8,7 @@ interface CreateButtonProps {
     onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const Button: React.FC<CreateButtonProps> = ({
+const SecondaryButton: React.FC<CreateButtonProps> = ({
                                                  children,
                                                  withIcon = false,
                                                  onClick = (e) => e.preventDefault(),
@@ -19,4 +19,4 @@ const Button: React.FC<CreateButtonProps> = ({
     </button>
 );
 
-export default Button;
+export default SecondaryButton;
