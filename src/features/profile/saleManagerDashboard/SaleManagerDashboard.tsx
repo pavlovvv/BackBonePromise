@@ -17,7 +17,6 @@ import CloseIcon from '@mui/icons-material/Close';
 import Toolbar from '@mui/material/Toolbar';
 import logo from './assets/logo.svg';
 import Root from "@/features/profile/saleManagerDashboard/Root/Root.tsx";
-import LangSelect from "@/features/profile/saleManagerDashboard/components/LangSelect.tsx";
 import IconProfile from './assets/IconProfile.svg'
 import HomeLogo from './assets/HomeLogo.svg'
 import letterLogo from './assets/letterLogo.svg'
@@ -191,9 +190,7 @@ function SaleManagerDashboard(props: HeaderProps) {
             </Box>
 
             {/* Праворуч: мова */}
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <LangSelect />
-            </Box>
+          
           </Toolbar>
         </AppBar>
 
