@@ -1,16 +1,6 @@
-
-import { FC, useState, ReactElement } from 'react';
-import {
-  Select,
-  MenuItem,
-  SelectChangeEvent,
-} from '@mui/material';
-import {
-  PieChart,
-  Pie,
-  Cell,
-  Sector,
-} from 'recharts';
+import { FC, useState, ReactElement } from "react";
+import { Select, MenuItem, SelectChangeEvent } from "@mui/material";
+import { PieChart, Pie, Cell, Sector } from "recharts";
 import { Period } from "@/features/profile/types.ts";
 import { donutChartData } from "@/features/profile/constants.ts";
 
@@ -59,42 +49,48 @@ const renderActiveShape = (props: any): ReactElement => {
 };
 
 const DonutChart: FC = () => {
-  const [timeRange, setTimeRange] = useState<Period>('This month');
+  const [timeRange, setTimeRange] = useState<Period>("This month");
 
   const handleChange = (event: SelectChangeEvent<Period>) => {
     setTimeRange(event.target.value as Period);
   };
 
   const activeIndex = donutChartData.reduce(
-    (maxIdx, entry, idx, arr) => (entry.value > arr[maxIdx].value ? idx : maxIdx),
+    (maxIdx, entry, idx, arr) =>
+      entry.value > arr[maxIdx].value ? idx : maxIdx,
     0
   );
 
   return (
-    <div style={{
-      width: "100%",
-      height: "100%",
-      padding: 16,
-      borderRadius: 16,
-      backgroundColor: '#fff',
-      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.05)',
-      display:"flex",
-      flexDirection:"column" ,
-      justifyContent:"space-between"
-      
-    }}>
+    <div
+      style={{
+        width: "100%",
+        height: "100%",
+        padding: 16,
+        borderRadius: 16,
+        backgroundColor: "#fff",
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.05)",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+      }}
+    >
       {/* Header */}
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        
-      }}>
-        <h3 style={{
-          fontSize: 18,
-          fontWeight: 500,
-          margin: 0
-        }}>Subscribers</h3>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <h3
+          style={{
+            margin: 0,
+            font: 'normal 400 24px "PT Serif", sans-serif',
+          }}
+        >
+          Subscribers
+        </h3>
         <Select
           value={timeRange}
           onChange={handleChange}
@@ -108,8 +104,19 @@ const DonutChart: FC = () => {
       </div>
 
       {/* Chart */}
-      <div style={{width:"100%", height:"100%" , display: 'flex', justifyContent: 'center' }}>
-        <PieChart style={{width:"400px !important"}} width={300} height={300}>
+      <div
+        style={{
+          width: "100%",
+          // height: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <PieChart
+          style={{ width: "400px !important" }}
+          width={300}
+          height={300}
+        >
           <Pie
             data={donutChartData}
             dataKey="value"
@@ -131,26 +138,40 @@ const DonutChart: FC = () => {
       </div>
 
       {/* Legend */}
-      <div style={{display:"flex" ,gap:"20px", justifyContent:"space-between" }}>
+      <div
+        style={{
+          display: "flex",
+          gap: "20px",
+          justifyContent: "space-between",
+        }}
+      >
         {donutChartData.map((item) => (
-          <div key={item.name} style={{
-            display: 'flex',
-            flex: "1",
-            alignItems: 'center',
-            flexDirection:"column",
-            fontSize: 14
-          }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <div style={{
-                width: 14,
-                height: 14,
-                borderRadius: '50%',
-                backgroundColor: item.color,
-                marginRight: 8
-              }} />
-              <span style={{ color: '#888' }}>{item.value}%</span>
+          <div
+            key={item.name}
+            style={{
+              display: "flex",
+              flex: "1",
+              alignItems: "center",
+              flexDirection: "column",
+              fontSize: 14,
+              gap: "10px",
+            }}
+          >
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <div
+                style={{
+                  width: 14,
+                  height: 14,
+                  borderRadius: "50%",
+                  backgroundColor: item.color,
+                  marginRight: 8,
+                }}
+              />
+              <span style={{ color: "#888" }}>{item.value}%</span>
             </div>
-            <span style={{  color: '#888', textAlign:"center" }}>{item.name}</span>
+            <span style={{ color: "#888", textAlign: "center" }}>
+              {item.name}
+            </span>
           </div>
         ))}
       </div>

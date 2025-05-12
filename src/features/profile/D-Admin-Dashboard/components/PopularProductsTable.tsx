@@ -1,5 +1,4 @@
-
-import { FC, useState } from 'react';
+import { FC, useState } from "react";
 import {
   Avatar,
   Table,
@@ -13,8 +12,8 @@ import {
   MenuItem,
   IconButton,
   SelectChangeEvent,
-} from '@mui/material';
-import VisibilityIcon from '@mui/icons-material/Visibility';
+} from "@mui/material";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 import { Period } from "@/features/profile/types";
 import { products } from "@/features/profile/constants.ts";
 
@@ -22,7 +21,7 @@ const ROWS_PER_PAGE = 5;
 
 const PopularProductsTable: FC = () => {
   const [page, setPage] = useState<number>(0);
-  const [period, setPeriod] = useState<Period>('This month');
+  const [period, setPeriod] = useState<Period>("This month");
 
   const handleChangePage = (_: unknown, newPage: number) => {
     setPage(newPage);
@@ -32,23 +31,34 @@ const PopularProductsTable: FC = () => {
     setPeriod(event.target.value as Period);
   };
 
-  const pagedProducts = products.slice(page * ROWS_PER_PAGE, page * ROWS_PER_PAGE + ROWS_PER_PAGE);
+  const pagedProducts = products.slice(
+    page * ROWS_PER_PAGE,
+    page * ROWS_PER_PAGE + ROWS_PER_PAGE
+  );
 
   return (
-    <div style={{
-      border: '1px solid #e0e0e0',
-      borderRadius: 12,
-      padding: 16,
-      backgroundColor: '#fff'
-    }}>
+    <div
+      style={{
+        border: "1px solid #e0e0e0",
+        borderRadius: 12,
+        padding: 16,
+        backgroundColor: "#fff",
+      }}
+    >
       {/* Header */}
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: 16
-      }}>
-        <h3 style={{ margin: 0, fontSize: 18 }}>Popular products</h3>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: 16,
+        }}
+      >
+        <h3
+          style={{ margin: 0, font: 'normal 400 24px "PT Serif", sans-serif' }}
+        >
+          Popular products
+        </h3>
         <Select
           value={period}
           onChange={handlePeriodChange}
@@ -76,34 +86,57 @@ const PopularProductsTable: FC = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {pagedProducts.map(product => (
+            {pagedProducts.map((product) => (
               <TableRow key={product.id + product.image}>
                 <TableCell>{product.id}</TableCell>
                 <TableCell>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                    <Avatar src={product.image} variant="rounded" sx={{ width: 40, height: 40 }} />
-                    <span style={{
-                      color: product.availability === 'Out of stock' ? '#888' : '#000'
-                    }}>{product.name}</span>
+                  <div
+                    style={{ display: "flex", alignItems: "center", gap: 8 }}
+                  >
+                    <Avatar
+                      src={product.image}
+                      variant="rounded"
+                      sx={{ width: 40, height: 40 }}
+                    />
+                    <span
+                      style={{
+                        color:
+                          product.availability === "Out of stock"
+                            ? "#888"
+                            : "#000",
+                      }}
+                    >
+                      {product.name}
+                    </span>
                   </div>
                 </TableCell>
                 <TableCell>
                   {product.discount ? (
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                      <span style={{
-                        backgroundColor: '#fcae92',
-                        color: '#fff',
-                        fontSize: 10,
-                        padding: '2px 6px',
-                        borderRadius: 4
-                      }}>{product.discount}</span>
+                    <div
+                      style={{ display: "flex", alignItems: "center", gap: 8 }}
+                    >
+                      <span
+                        style={{
+                          backgroundColor: "#fcae92",
+                          color: "#fff",
+                          fontSize: 10,
+                          padding: "2px 6px",
+                          borderRadius: 4,
+                        }}
+                      >
+                        {product.discount}
+                      </span>
                       <strong>${product.price}</strong>
                       {product.oldPrice && (
-                        <span style={{
-                          textDecoration: 'line-through',
-                          color: '#aaa',
-                          fontSize: 12
-                        }}>${product.oldPrice}</span>
+                        <span
+                          style={{
+                            textDecoration: "line-through",
+                            color: "#aaa",
+                            fontSize: 12,
+                          }}
+                        >
+                          ${product.oldPrice}
+                        </span>
                       )}
                     </div>
                   ) : (
@@ -111,14 +144,21 @@ const PopularProductsTable: FC = () => {
                   )}
                 </TableCell>
                 <TableCell>
-                  <span style={{
-                    border: `1px solid ${product.availability === 'In stock' ? 'green' : 'red'}`,
-                    color: product.availability === 'In stock' ? 'green' : 'red',
-                    borderRadius: 8,
-                    padding: '2px 8px',
-                    fontSize: 12,
-                    fontWeight: 500,
-                  }}>{product.availability}</span>
+                  <span
+                    style={{
+                      border: `1px solid ${
+                        product.availability === "In stock" ? "green" : "red"
+                      }`,
+                      color:
+                        product.availability === "In stock" ? "green" : "red",
+                      borderRadius: 8,
+                      padding: "2px 8px",
+                      fontSize: 12,
+                      fontWeight: 500,
+                    }}
+                  >
+                    {product.availability}
+                  </span>
                 </TableCell>
                 <TableCell>{product.sell}</TableCell>
                 <TableCell>
@@ -133,14 +173,18 @@ const PopularProductsTable: FC = () => {
       </TableContainer>
 
       {/* Pagination */}
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginTop: 16
-      }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginTop: 16,
+        }}
+      >
         <span style={{ fontSize: 12 }}>
-          Showing {page * ROWS_PER_PAGE + 1}-{Math.min((page + 1) * ROWS_PER_PAGE, products.length)} of {products.length} entries
+          Showing {page * ROWS_PER_PAGE + 1}-
+          {Math.min((page + 1) * ROWS_PER_PAGE, products.length)} of{" "}
+          {products.length} entries
         </span>
         <TablePagination
           component="div"
