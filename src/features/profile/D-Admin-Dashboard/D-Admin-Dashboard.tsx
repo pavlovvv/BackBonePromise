@@ -1,4 +1,4 @@
-import './SaleManagerDashboard.css';
+import './D-Agent-Dashboard.css';
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
@@ -16,7 +16,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Toolbar from '@mui/material/Toolbar';
 import logo from './assets/logo.svg';
-import Root from "@/features/profile/saleManagerDashboard/Root/Root.tsx";
+import Root from "@/features/profile/D-Admin-Dashboard/Root/Root.tsx";
 import IconProfile from './assets/IconProfile.svg'
 import HomeLogo from './assets/HomeLogo.svg'
 import letterLogo from './assets/letterLogo.svg'
@@ -29,7 +29,7 @@ type HeaderProps = {
     window?: () => Window;
 };
 
-function SaleManagerDashboard(props: HeaderProps) {
+function D_Admin_Dashboard(props: HeaderProps) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [isClosing, setIsClosing] = React.useState(false);
@@ -190,7 +190,7 @@ function SaleManagerDashboard(props: HeaderProps) {
             </Box>
 
             {/* Праворуч: мова */}
-          
+
           </Toolbar>
         </AppBar>
 
@@ -210,8 +210,8 @@ function SaleManagerDashboard(props: HeaderProps) {
   );
 }
 
-SaleManagerDashboard.propTypes = {
+D_Admin_Dashboard.propTypes = {
   window: PropTypes.func,
 };
 
-export default SaleManagerDashboard;
+export default D_Admin_Dashboard;

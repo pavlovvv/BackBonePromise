@@ -63,6 +63,13 @@ export const donutChartData: DataEntry[] = [
     { name: 'The runway', value: 24, color: '#EF4D56' },
 ];
 
+export const donutChartDataOrders: DataEntry[] = [
+    { name: 'The debut', value: 27, color: '#49AB3A' },
+    { name: 'The atelier', value: 49, color: '#EDCE54' },
+    { name: 'The runway', value: 24, color: '#EF4D56' },
+];
+
+
 export const uData: number[] = [30000, 35000, 45000, 42000, 50000, 55000, 85000, 120000];
 export const pData: number[] = [20000, 25000, 32000, 36000, 30000, 38000, 60000, 85000];
 export const xLabels: string[] = ['01', '05', '10', '12', '15', '20', '25', '30'];
