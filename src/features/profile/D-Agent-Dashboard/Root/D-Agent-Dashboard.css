@@ -86,4 +86,10 @@
 .body-container .section_PopularProducts .section_DonutChart {
   flex-basis: 40%;
   min-width: 350px;
-}/*# sourceMappingURL=Root.css.map */
+}
+
+.MuiChartsGrid-line {
+  stroke-dasharray: 4 4;
+  stroke: #CBD5E1;
+  stroke-width: 1;
+}/*# sourceMappingURL=D-Agent-Dashboard.css.map */

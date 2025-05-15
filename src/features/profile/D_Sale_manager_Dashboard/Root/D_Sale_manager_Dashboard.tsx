@@ -1,4 +1,4 @@
-import "./D-Admin-Dashboard.css";
+import "./D_Sale_manager_Dashboard.css";
 import userLogo from "../assets/userLogo.svg";
 import addFriens from "../assets/user-add.svg";
 import dollar from "../assets/dollar-1.svg";
@@ -7,12 +7,11 @@ import BalanceOverviewChart from "../../../../components/common/charts/LineDiagr
 import PopularProductsTable from "../../../../components/common/charts/PopularProductsTable.tsx";
 // import CurrentRevenueCard from '../components/CurrentRevenueCard.tsx';
 import DonutChart from "../../../../components/common/charts/DonutChart.tsx";
-import DonutChartOrder from "../../../../components/common/charts/DonutChartOrder.tsx";
 import Sidebar from "../../../../components/common/sidebar/Sidebar.tsx";
 import ClientProfileTop from "../../../../components/common/clientProfileTop/ClientProfileTop.tsx";
 // import ReferralsBarChart from "../components/ReferralsBarChart.tsx"
-
-function D_Admin_Dashboard() {
+import CurrentRevenueCard from "../../../../components/common/charts/CurrentRevenueCard.tsx";
+function D_Sale_manager_Dashboard() {
   return (
     <div
       style={{
@@ -109,8 +108,7 @@ function D_Admin_Dashboard() {
           </section>
           <section className="section_lineDiagram">
             <div className="section_CurrentRevenueCard">
-              {/* <ReferralsBarChart/> */}
-              <DonutChart />
+              <CurrentRevenueCard />
             </div>
             <div className="section_BalanceOverviewChart">
               <BalanceOverviewChart />
@@ -121,7 +119,7 @@ function D_Admin_Dashboard() {
               <PopularProductsTable />
             </div>
             <div className="section_DonutChart">
-              <DonutChartOrder />
+              <DonutChart />
             </div>
           </section>
         </div>
@@ -130,4 +128,4 @@ function D_Admin_Dashboard() {
   );
 }
 
-export default D_Admin_Dashboard;
+export default D_Sale_manager_Dashboard;

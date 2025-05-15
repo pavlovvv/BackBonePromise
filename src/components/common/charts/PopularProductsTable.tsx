@@ -41,7 +41,7 @@ const PopularProductsTable: FC = () => {
       style={{
         border: "1px solid #e0e0e0",
         borderRadius: 12,
-        padding: 16,
+        padding: 24,
         backgroundColor: "#fff",
       }}
     >

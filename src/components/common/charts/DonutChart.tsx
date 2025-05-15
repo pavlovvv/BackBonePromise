@@ -2,11 +2,25 @@ import { FC, useState, ReactElement } from "react";
 import { Select, MenuItem, SelectChangeEvent } from "@mui/material";
 import { PieChart, Pie, Cell, Sector } from "recharts";
 import { Period } from "@/features/profile/types.ts";
-import { donutChartDataOrders } from "@/features/profile/constants.ts";
+import { donutChartData } from "@/features/profile/constants.ts";
 
 const renderActiveShape = (props: any): ReactElement => {
-  const { cx, cy, innerRadius, outerRadius, startAngle, endAngle, fill } =
-    props;
+  const {
+    cx,
+    cy,
+    innerRadius,
+    outerRadius,
+    startAngle,
+    endAngle,
+    fill,
+    payload,
+    midAngle,
+  } = props;
+
+  const RADIAN = Math.PI / 180;
+  const radius = (innerRadius + outerRadius + 10) / 2;
+  const x = cx + radius * Math.cos(-midAngle * RADIAN);
+  const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
   return (
     <g>
@@ -14,11 +28,22 @@ const renderActiveShape = (props: any): ReactElement => {
         cx={cx}
         cy={cy}
         innerRadius={innerRadius}
-        outerRadius={outerRadius}
+        outerRadius={outerRadius + 12}
         startAngle={startAngle}
         endAngle={endAngle}
         fill={fill}
       />
+      <text
+        x={x}
+        y={y}
+        textAnchor="middle"
+        dominantBaseline="central"
+        fill="#fff"
+        fontSize={14}
+        fontWeight="bold"
+      >
+        {`${payload.value}%`}
+      </text>
     </g>
   );
 };
@@ -30,7 +55,7 @@ const DonutChart: FC = () => {
     setTimeRange(event.target.value as Period);
   };
 
-  const activeIndex = donutChartDataOrders.reduce(
+  const activeIndex = donutChartData.reduce(
     (maxIdx, entry, idx, arr) =>
       entry.value > arr[maxIdx].value ? idx : maxIdx,
     0
@@ -41,7 +66,7 @@ const DonutChart: FC = () => {
       style={{
         width: "100%",
         height: "100%",
-        padding: 16,
+        padding: 24,
         borderRadius: 16,
         backgroundColor: "#fff",
         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.05)",
@@ -60,13 +85,11 @@ const DonutChart: FC = () => {
       >
         <h3
           style={{
-            fontSize: 18,
-            fontWeight: 500,
             margin: 0,
             font: 'normal 400 24px "PT Serif", sans-serif',
           }}
         >
-          Orders delivery
+          Subscribers
         </h3>
         <Select
           value={timeRange}
@@ -95,7 +118,7 @@ const DonutChart: FC = () => {
           height={300}
         >
           <Pie
-            data={donutChartDataOrders}
+            data={donutChartData}
             dataKey="value"
             cx="50%"
             cy="50%"
@@ -107,7 +130,7 @@ const DonutChart: FC = () => {
             activeIndex={activeIndex}
             activeShape={renderActiveShape}
           >
-            {donutChartDataOrders.map((entry) => (
+            {donutChartData.map((entry) => (
               <Cell key={entry.name} fill={entry.color} />
             ))}
           </Pie>
@@ -122,7 +145,7 @@ const DonutChart: FC = () => {
           justifyContent: "space-between",
         }}
       >
-        {donutChartDataOrders.map((item) => (
+        {donutChartData.map((item) => (
           <div
             key={item.name}
             style={{

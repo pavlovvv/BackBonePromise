@@ -67,7 +67,7 @@ const BalanceOverviewChart: FC = () => {
       style={{
         border: "1px solid rgba(0,0,0,0.12)",
         borderRadius: "12px",
-        padding: "16px",
+        padding: "24px",
         backgroundColor: "#fff",
       }}
     >
