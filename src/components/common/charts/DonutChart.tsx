@@ -66,7 +66,7 @@ const DonutChart: FC = () => {
       style={{
         width: "100%",
         height: "100%",
-        padding: 16,
+        padding: 24,
         borderRadius: 16,
         backgroundColor: "#fff",
         boxShadow: "0 2px 8px rgba(0, 0, 0, 0.05)",

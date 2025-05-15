@@ -175,7 +175,7 @@ const CurrentRevenueCard: FC = () => {
       style={{
         border: "1px solid #ccc",
         borderRadius: "12px",
-        padding: "20px",
+        padding: "24px",
         backgroundColor: "#fff",
         height: "100%",
       }}
