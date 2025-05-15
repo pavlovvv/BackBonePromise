@@ -157,18 +157,13 @@
 // };
 
 // export default CurrentRevenueCard;
-import { FC, useState } from 'react';
-import {
-  Select,
-  MenuItem,
-  SelectChangeEvent,
-  Tooltip,
-} from '@mui/material';
-import { Period } from '@/features/profile/types.ts';
-import { revenueData } from '@/features/profile/constants.ts';
+import { FC, useState } from "react";
+import { Select, MenuItem, SelectChangeEvent, Tooltip } from "@mui/material";
+import { Period } from "@/features/profile/types.ts";
+import { revenueData } from "@/features/profile/constants.ts";
 
 const CurrentRevenueCard: FC = () => {
-  const [period, setPeriod] = useState<Period>('This month');
+  const [period, setPeriod] = useState<Period>("This month");
   const [, setHovered] = useState<string | null>(null);
 
   const handlePeriodChange = (event: SelectChangeEvent<Period>) => {
@@ -176,20 +171,27 @@ const CurrentRevenueCard: FC = () => {
   };
 
   return (
-    <div style={{
-      border: '1px solid #ccc',
-      borderRadius: '12px',
-      padding: '20px',
-      backgroundColor: '#fff'
-    }}>
+    <div
+      style={{
+        border: "1px solid #ccc",
+        borderRadius: "12px",
+        padding: "20px",
+        backgroundColor: "#fff",
+        height: "100%",
+      }}
+    >
       {/* Header */}
-      <div style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        marginBottom: '16px'
-      }}>
-        <h3 style={{font:" 400 24px PT Serif, sans-serif" ,  margin: 0 }}>Current revenue</h3>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: "16px",
+        }}
+      >
+        <h3 style={{ font: " 400 24px PT Serif, sans-serif", margin: 0 }}>
+          Current revenue
+        </h3>
         <Select
           value={period}
           onChange={handlePeriodChange}
@@ -204,23 +206,33 @@ const CurrentRevenueCard: FC = () => {
       </div>
 
       {/* Total */}
-      <h2 style={{fontSize:"24px" ,font:" 400 24px Open Sans, sans-serif", margin: '0 0 8px 0' }}>
+      <h2
+        style={{
+          fontSize: "24px",
+          font: " 400 24px Open Sans, sans-serif",
+          margin: "0 0 8px 0",
+        }}
+      >
         ${revenueData.total / 1000}k
       </h2>
-      <p style={{ color: '#777', marginBottom: 16 }}>Total revenue</p>
+      <p style={{ color: "#777", marginBottom: 16 }}>Total revenue</p>
 
       {/* Progress Bar with Tooltip */}
-      <div style={{
-        display: 'flex',
-        height: 15,
-        borderRadius: 5,
-        overflow: 'hidden',
-        marginBottom: 16
-      }}>
-        {revenueData.segments.map(segment => (
+      <div
+        style={{
+          display: "flex",
+          height: 15,
+          borderRadius: 5,
+          overflow: "hidden",
+          marginBottom: 16,
+        }}
+      >
+        {revenueData.segments.map((segment) => (
           <Tooltip
             key={segment.label}
-            title={`${segment.label} — $${segment.value / 1000}k (${segment.percent}%)`}
+            title={`${segment.label} — $${segment.value / 1000}k (${
+              segment.percent
+            }%)`}
             placement="top"
             arrow
           >
@@ -228,7 +240,7 @@ const CurrentRevenueCard: FC = () => {
               style={{
                 flex: segment.percent,
                 backgroundColor: segment.color,
-                cursor: 'pointer'
+                cursor: "pointer",
               }}
               onMouseEnter={() => setHovered(segment.label)}
               onMouseLeave={() => setHovered(null)}
@@ -238,56 +250,76 @@ const CurrentRevenueCard: FC = () => {
       </div>
 
       {/* Labels */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-        {revenueData.segments.map(segment => (
+      <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+        {revenueData.segments.map((segment) => (
           <div
             key={segment.label}
             style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: 8
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
             }}
           >
-            <div style={{
-              width: 12,
-              height: 12,
-              borderRadius: '50%',
-              backgroundColor: segment.color,
-              border: '2px solid #fff',
-              flexShrink: 0
-            }} />
-            <div style={{ flex: 1 }}>{segment.label}</div>
+            <div
+              style={{
+                width: 16,
+                height: 16,
+                borderRadius: "50%",
+                backgroundColor: segment.color,
+                border: "2px solid #fff",
+                flexShrink: 0,
+              }}
+            />
+            <div
+              style={{
+                color: "black",
+                font: 'normal 400 14px "Open Sans", sans-serif',
+                flex: 1,
+              }}
+            >
+              {segment.label}
+            </div>
             <div>
-              ${segment.value / 1000}k{' '}
-              <span style={{ color: '#777' }}>({segment.percent}%)</span>
+              ${segment.value / 1000}k{" "}
+              <span style={{ color: "black" }}>({segment.percent}%)</span>
             </div>
           </div>
         ))}
 
         {/* Nested Items */}
         <div style={{ paddingLeft: 32, marginTop: 8 }}>
-          {revenueData.segments[0].children?.map(child => (
+          {revenueData.segments[0].children?.map((child) => (
             <div
               key={child.label}
               style={{
-                display: 'flex',
-                alignItems: 'center',
+                display: "flex",
+                alignItems: "center",
                 gap: 8,
-                marginBottom: 4
+                marginBottom: 4,
               }}
             >
-              <div style={{
-                width: 12,
-                height: 12,
-                borderRadius: '50%',
-                backgroundColor: child.color,
-                border: '2px solid #fff',
-                flexShrink: 0
-              }} />
-              <div style={{ flex: 1 }}>{child.label}</div>
+              <div
+                style={{
+                  width: 16,
+                  height: 16,
+                  borderRadius: "50%",
+                  backgroundColor: child.color,
+                  border: "2px solid #fff",
+                  flexShrink: 0,
+                }}
+              />
+              <div
+                style={{
+                  flex: 1,
+                  font: 'normal 400 14px "Open Sans", sans-serif',
+                  color: "black",
+                }}
+              >
+                {child.label}
+              </div>
               <div>
-                ${child.value / 1000}k{' '}
-                <span style={{ color: '#777' }}>({child.percent}%)</span>
+                ${child.value / 1000}k{" "}
+                <span style={{ color: "#777" }}>({child.percent}%)</span>
               </div>
             </div>
           ))}
