@@ -1,0 +1,76 @@
+.popup-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+}
+
+.qwe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.popup {
+  background: white;
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 480px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.popup_info-block h2 {
+  font: 400 32px "PT Serif";
+}
+.popup_info-block p {
+  font: 400 18px "Open Sans";
+}
+
+.popup_close-block {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 15px;
+}
+.popup_close-block .popup_close-button {
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  background: none;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn {
+  padding: 9px 0;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  max-width: 174px;
+  width: 100%;
+}
+.btn.confirm {
+  background: #ee774d;
+  color: white;
+  font: 400 18px "Open Sans";
+}
+.btn.confirm:hover {
+  background: #ea531e;
+}
+.btn.cancel {
+  background: #fcded3;
+  color: #ee774d;
+  border: 1px solid #ee774d;
+  font: 400 18px "Open Sans";
+}
+.btn.cancel:hover {
+  background: white;
+}/*# sourceMappingURL=popUp_Delete.css.map */
