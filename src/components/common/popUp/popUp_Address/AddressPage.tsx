@@ -4,7 +4,7 @@ import { AddressPopup } from './AddressPopup'
 export const AddressPage: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false)
   const [isEditMode, setIsEditMode] = useState(false)
-  const [selectedAddress, setSelectedAddress] = useState({
+  const [selectedAddress, _setSelectedAddress] = useState({
     streetNumber: '2400',
     streetName: 'Arbutus',
     city: 'Los Angeles',
