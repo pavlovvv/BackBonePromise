@@ -71,7 +71,7 @@
 
 import React from "react";
 import "./AddressPopup.css";
-import { Select, MenuItem, FormControl, InputLabel } from "@mui/material";
+import { Select, MenuItem, FormControl } from "@mui/material";
 
 type AddressPopupProps = {
   isEdit?: boolean;
