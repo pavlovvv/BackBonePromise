@@ -5,6 +5,7 @@ import ArrowIconSrc from "@/features/profile/SupportTicketsChat/assets/ArrowBott
 import deleteLogo from "./assets/deleteLogo.svg";
 import penLogo from "./assets/penLogo.svg";
 import plusLogo from "../Payments/assets/plusLogo.svg";
+import { AddressPopup } from "@/components/common/popUp/popUp_Address/AddressPopup";
 
 const TIME_ZONES = [
 	"2400, Arbutus, Los Angeles, CA 90049-1209, USA",
@@ -16,6 +17,28 @@ export default function TimeZoneSelect() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const additionalAddresses = TIME_ZONES.slice(1); // усі окрім першої
+
+	const [isEditMode, setIsEditMode] = useState(false);
+	const [isPopupOpen, setIsPopupOpen] = useState(false);
+	const [selectedAddress, _setSelectedAddress] = useState({
+		streetNumber: "2400",
+		streetName: "Arbutus",
+		city: "Los Angeles",
+		state: "CA (California)",
+		postcode: "90001",
+		country: "USA",
+	});
+	const handleAddClick = () => {
+		setIsEditMode(false);
+		setIsPopupOpen(true);
+	};
+	const handleSubmit = () => {
+		alert(isEditMode ? "Address updated!" : "Address added!");
+		setIsPopupOpen(false);
+	};
+	const handleClose = () => {
+		setIsPopupOpen(false)
+	  }
 
 	return (
 		<div className={style["address-container"]}>
@@ -65,8 +88,15 @@ export default function TimeZoneSelect() {
 						)}
 					</AnimatePresence>
 				</div>
-
-				<button className={style["address-container__add-button"]}>
+				{isPopupOpen && (
+					<AddressPopup
+						isEdit={isEditMode}
+						onClose={handleClose}
+						onSubmit={handleSubmit}
+						address={isEditMode ? selectedAddress : undefined}
+					/>
+				)}
+				<button onClick={handleAddClick} className={style["address-container__add-button"]}>
 					<img src={plusLogo} alt="Add" />
 					Add
 				</button>

@@ -6,6 +6,7 @@ import UploadAvatars from "./UploadAvatars/UploadAvatars";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { useState } from "react";
+import PopUp_Delete from "@/components/common/popUp/popUp_Delete/popUp_Delete";
 
 interface TabPanelProps {
 	children?: React.ReactNode;
@@ -23,12 +24,10 @@ function CustomTabPanel(props: TabPanelProps) {
 			id={`simple-tabpanel-${index}`}
 			aria-labelledby={`simple-tab-${index}`}
 			{...other}
-            className={style['tabs-content__body']}
+			className={style["tabs-content__body"]}
 		>
 			{value === index && (
-				<div className={style["tabs-content__block"]} >
-					{children}
-				</div>
+				<div className={style["tabs-content__block"]}>{children}</div>
 			)}
 		</div>
 	);
@@ -48,6 +47,17 @@ export default function BasicTabs() {
 	const [show, setShow] = useState(false);
 	const [oldPasswordShow, setOldPasswordShow] = useState(false);
 
+	const [name, setName] = useState("Sandra");
+	const [brandName, setBrandName] = useState("Anna Adame");
+	const [email, setEmail] = useState("anna.adame@gmail.com");
+	const [phone, setPhone] = useState("(213) 952 4384");
+
+	const [isDeletePopupOpen, setDeletePopupOpen] = useState(false);
+	const handleDelete = () => {
+		console.log("Delete confirmed");
+		setDeletePopupOpen(false);
+	};
+	const closeDeletePopup = () => setDeletePopupOpen(false);
 	const isLengthValid = password.length >= 8 && password.length <= 20;
 	const hasLower = /[a-z]/.test(password);
 	const hasUpper = /[A-Z]/.test(password);
@@ -98,13 +108,21 @@ export default function BasicTabs() {
 								Brand name <span>(optional)</span>
 							</p>
 							<div className={style["tabs-content__info-text"]}>
-								<p>Sandro</p>
+								<input
+									type="text"
+									value={name}
+									onChange={(e) => setName(e.target.value)}
+								/>
 							</div>
 						</div>
 						<div className={style["tabs-content__info-block"]}>
 							<p className={style["tabs-content__info-title"]}>Name</p>
 							<div className={style["tabs-content__info-text"]}>
-								<p>Anna Adame</p>
+								<input
+									type="text"
+									value={brandName}
+									onChange={(e) => setBrandName(e.target.value)}
+								/>
 							</div>
 						</div>
 						<div className={style["tabs-content__info-block"]}>
@@ -112,7 +130,11 @@ export default function BasicTabs() {
 							<div
 								className={`${style["tabs-content__info-text"]} ${style["tabs-content__info-text--spaced"]}`}
 							>
-								<p>anna.adame@gmail.com</p>
+								<input
+									type="text"
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
+								/>
 							</div>
 
 							<div className={style["tabs-content__checkbox-block"]}>
@@ -121,11 +143,13 @@ export default function BasicTabs() {
 							</div>
 						</div>
 						<div className={style["tabs-content__info-block"]}>
-							<p className={style["tabs-content__info-title"]}>
-                            Phone number
-							</p>
+							<p className={style["tabs-content__info-title"]}>Phone number</p>
 							<div className={style["tabs-content__info-text"]}>
-								<p>14234124142</p>
+								<input
+									type="text"
+									value={phone}
+									onChange={(e) => setPhone(e.target.value)}
+								/>
 							</div>
 						</div>
 					</CustomTabPanel>
@@ -133,9 +157,7 @@ export default function BasicTabs() {
 						<div className={style["tabs-content__wrapper"]}>
 							<div className={style["tabs-content__info-block"]}>
 								<p className={style["tabs-content__info-title"]}>Old password</p>
-								<div
-									className={`${style["tabs-content__info-text"]} `}
-								>
+								<div className={`${style["tabs-content__info-text"]} `}>
 									<input
 										disabled
 										type={oldPasswordShow ? "text" : "password"}
@@ -171,7 +193,7 @@ export default function BasicTabs() {
 										)}
 									</span>
 								</div>
-								<p className={style['tabs-content__hint']}>
+								<p className={style["tabs-content__hint"]}>
 									<span
 										style={{ font: "400 14px Open Sans" }}
 										className={isLengthValid ? style["green"] : ""}
@@ -205,9 +227,7 @@ export default function BasicTabs() {
 								<p className={style["tabs-content__info-title"]}>
 									Confirm new password
 								</p>
-								<div
-									className={`${style["tabs-content__info-text"]}`}
-								>
+								<div className={`${style["tabs-content__info-text"]}`}>
 									<input
 										type="password"
 										placeholder="Confirm password"
@@ -219,11 +239,26 @@ export default function BasicTabs() {
 							</div>
 						</div>
 						<div className={style["tabs-content__info-block"]}>
-							<div className={style["tabs-content__button-block"]} style={{ display: "flex", justifyContent: "end" }}>
+							<div
+								className={style["tabs-content__button-block"]}
+								style={{ display: "flex", justifyContent: "end" }}
+							>
+								{isDeletePopupOpen && (
+									<PopUp_Delete
+										title="Delete"
+										message="Are you sure?"
+										confirmText="No"
+										cancelText="Delete"
+										showCancel
+										onConfirm={handleDelete}
+										onCancel={closeDeletePopup}
+									/>
+								)}
 								<button
+									onClick={() => setDeletePopupOpen(true)}
 									style={{ flexBasis: "50%", font: "400 18px Open Sans" }}
 									className="tabs-content__submit"
-									onClick={handleSubmit}
+									// onClick={handleSubmit}
 								>
 									Change password
 								</button>

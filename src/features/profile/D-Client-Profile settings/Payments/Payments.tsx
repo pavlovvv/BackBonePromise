@@ -1,6 +1,4 @@
-
-
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import style from "./Payments.module.sass";
 import ArrowIconSrc from "@/features/profile/SupportTicketsChat/assets/ArrowBottom.svg";
@@ -9,7 +7,7 @@ import penLogo from "./assets/penLogo.svg";
 import GooglePayLogo from "./assets/GooglePayLogo.svg";
 import MasterCardLogo from "./assets/MasterCardLogo.svg";
 import plusLogo from "./assets/plusLogo.svg";
-
+import CreateNewPasswordPopup from "@/components/common/popUp/popUp_Password/CreateNewPasswordPopup/CreateNewPasswordPopup";
 
 const PAYMENT_CARDS = [
 	{
@@ -27,6 +25,10 @@ const PAYMENT_CARDS = [
 export default function Payments() {
 	const [isOpen, setIsOpen] = useState(false);
 	const additionalCards = PAYMENT_CARDS.slice(1); // всі, крім першої
+	const [showCreatePopup, setShowCreatePopup] = useState(false);
+
+
+	  
 
 	return (
 		<div className={style.container}>
@@ -46,12 +48,8 @@ export default function Payments() {
 						<div className={style["payments__info-block"]}>
 							<img src={PAYMENT_CARDS[0].logo} alt={PAYMENT_CARDS[0].name} />
 							<div className={style["payments__info-wrapper"]}>
-								<p className={style["payments__name"]}>
-									{PAYMENT_CARDS[0].name}
-								</p>
-								<p className={style["payments__numbers"]}>
-									{PAYMENT_CARDS[0].number}
-								</p>
+								<p className={style["payments__name"]}>{PAYMENT_CARDS[0].name}</p>
+								<p className={style["payments__numbers"]}>{PAYMENT_CARDS[0].number}</p>
 							</div>
 						</div>
 						<div className={style["payments__actions"]}>
@@ -75,12 +73,8 @@ export default function Payments() {
 											<div className={style["payments__info-block"]}>
 												<img src={card.logo} alt={card.name} />
 												<div className={style["payments__info-wrapper"]}>
-													<p className={style["payments__name-card"]}>
-														{card.name}
-													</p>
-													<p className={style["payments__numbers-card"]}>
-														{card.number}
-													</p>
+													<p className={style["payments__name-card"]}>{card.name}</p>
+													<p className={style["payments__numbers-card"]}>{card.number}</p>
 												</div>
 											</div>
 											<div className={style["payments__actions"]}>
@@ -94,8 +88,17 @@ export default function Payments() {
 						)}
 					</AnimatePresence>
 				</div>
-
-				<button className={style.addButton}><img src={plusLogo}></img>Add</button>
+				{showCreatePopup && (
+					<div className="popup-container">
+						<CreateNewPasswordPopup onClose={() => setShowCreatePopup(false)} />
+					</div>
+				)}
+				<button
+					onClick={() => setShowCreatePopup(true)}
+					className={style.addButton}
+				>
+					<img src={plusLogo}></img>Add{" "}
+				</button>
 			</div>
 		</div>
 	);

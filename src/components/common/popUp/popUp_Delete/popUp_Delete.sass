@@ -11,13 +11,13 @@ $primary-color-dark: #b65e31
   display: flex
   flex-direction: column
   justify-content: space-between
-  gap: 30px
+  height: 100%
 .popup
 
   background: white
   border-radius: 8px
-  padding: 32px
-  max-width: 480px
+  padding: 24px !important
+  max-width: 480px 
   width: 100%
   position: relative
   text-align: center
@@ -60,10 +60,10 @@ $primary-color-dark: #b65e31
       background: darken($primary-color, 10%)
 
   &.cancel
-    background: $primary-color-light
-    color: $primary-color
-    border: 1px solid $primary-color
+    background: $primary-color-light !important
+    color: $primary-color !important
+    border: 1px solid $primary-color !important
     font: 400 18px 'Open Sans'
 
     &:hover
-      background: lighten($primary-color-light, 10%)
+      background: lighten($primary-color-light, 10%) 
