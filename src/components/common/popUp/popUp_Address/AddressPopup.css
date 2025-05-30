@@ -88,4 +88,9 @@ select.popup__field {
 
 .popup__cancel:hover {
   background: white;
+}
+
+.no-scroll {
+  overflow: hidden !important;
+  height: 100vh;
 }/*# sourceMappingURL=AddressPopup.css.map */
