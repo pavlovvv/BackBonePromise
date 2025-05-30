@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 426px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+}
+.container__block {
+  padding: 24px;
+  width: 100%;
+}
+.container__block .links-title__block {
+  margin-bottom: 16px;
+  font: 400 24px "PT Serif";
+  color: #000;
+}
+.container .links {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.container .links__block {
+  display: flex;
+  padding: 12px 16px;
+  gap: 8px;
+  width: -moz-min-content;
+  width: min-content;
+  align-items: center;
+  border-radius: 100px;
+}
+.container .links__block p {
+  font: 400 18px "Open Sans";
+}
+.container .links__block--active {
+  background: #FFE5D7;
+}
+.container .links__block--disabled {
+  background: #E6EFF3;
+}
+.container .links__img-logo {
+  width: 17px;
+}
+.container .links__link-logo {
+  height: 8px;
+}/*# sourceMappingURL=LinkedAccount.module.css.map */

@@ -12,6 +12,7 @@ import CardPopUp_Page from "./components/common/popUp/popUp_Card/CardPopUp_Page.
 import PasswordPopupsContainer from "./components/common/popUp/popUp_Password/PasswordPopupsContainer.tsx";
 import { AddressPage } from "./components/common/popUp/popUp_Address/AddressPage.tsx";
 import { PaymentPage } from "./components/common/popUp/popUp_AddPaymentMethod/PaymentPage.tsx";
+import D_Client_Profile_settings from "./features/profile/D-Client-Profile settings/Root/D-Client-Profile-settings.tsx";
 function App() {
   return (
     <Router>
@@ -29,6 +30,7 @@ function App() {
         />
 
         <Route path="/profile/tickets/chat" element={<SupportTicketsChat />} />
+        <Route path="/profile/tickets/Profile_settings" element={<D_Client_Profile_settings />} />
 
 
         <Route path="/profile/tickets/PopUp_Delete" element={<PopUp_DeletePage  />} />
