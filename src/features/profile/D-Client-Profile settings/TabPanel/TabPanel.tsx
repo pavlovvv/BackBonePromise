@@ -63,14 +63,14 @@ export default function BasicTabs() {
 	const hasUpper = /[A-Z]/.test(password);
 	const hasDigit = /\d/.test(password);
 
-	const isValid =
-		isLengthValid && hasLower && hasUpper && hasDigit && password === confirm;
+	// const isValid =
+	// 	isLengthValid && hasLower && hasUpper && hasDigit && password === confirm;
 
-	const handleSubmit = () => {
-		if (isValid) {
-			console.log("New password:", password);
-		}
-	};
+	// const handleSubmit = () => {
+	// 	if (isValid) {
+	// 		console.log("New password:", password);
+	// 	}
+	// };
 
 	const handleChange = (_event: React.SyntheticEvent, newValue: number) => {
 		setValue(newValue);
@@ -105,7 +105,7 @@ export default function BasicTabs() {
 						</div>
 						<div className={style["tabs-content__info-block"]}>
 							<p className={style["tabs-content__info-title"]}>
-								Brand name <span>(optional)</span>
+								Brand name <span >(optional)</span>
 							</p>
 							<div className={style["tabs-content__info-text"]}>
 								<input

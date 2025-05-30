@@ -1,4 +1,4 @@
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import style from "./Payments.module.sass";
 import ArrowIconSrc from "@/features/profile/SupportTicketsChat/assets/ArrowBottom.svg";
