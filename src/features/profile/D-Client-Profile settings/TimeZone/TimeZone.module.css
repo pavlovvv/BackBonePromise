@@ -1,0 +1,51 @@
+.timezone {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  width: 100%;
+}
+.timezone__wrapper {
+  padding: 24px;
+  width: 100%;
+}
+.timezone__title {
+  margin-bottom: 16px;
+}
+.timezone__title p {
+  font: 400 24px "PT Serif";
+  color: #000;
+}
+.timezone__selectWrapper {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.timezone__select {
+  width: 100%;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+.timezone :global(.MuiSelect-select) {
+  padding: 0;
+  font-weight: 400;
+}
+.timezone :global(.MuiSvgIcon-root) {
+  display: none;
+}
+.timezone :global(.MuiSelect-icon) {
+  transition: transform 300ms ease;
+  right: 16px;
+  top: calc(50% - 12px);
+  position: absolute;
+  pointer-events: none;
+}
+.timezone :global(.MuiSelect-icon.MuiSelect-iconOpen) {
+  transform: rotate(180deg);
+}
+.timezone :global(.MuiOutlinedInput-notchedOutline) {
+  display: none !important;
+}/*# sourceMappingURL=TimeZone.module.css.map */

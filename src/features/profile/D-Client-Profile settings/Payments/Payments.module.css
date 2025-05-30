@@ -1,0 +1,83 @@
+.container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+}
+.container__block {
+  display: flex;
+  flex-direction: column;
+}
+.container__block .addButton {
+  background-color: #f47c51;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 16px;
+  align-self: flex-end;
+  cursor: pointer;
+  font: 400 18px "Open Sans";
+}
+.container__block .addButton img {
+  margin-right: 8px;
+}
+.container__block .payments {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  margin-bottom: 24px;
+}
+.container__block .payments__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: white;
+}
+.container__block .payments__info-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container__block .payments__info-block img {
+  height: 33px;
+}
+.container__block .payments__info-wrapper p {
+  font: 400 18px "Open Sans";
+}
+.container__block .payments__numbers {
+  color: grey !important;
+}
+.container__block .payments__actions {
+  display: flex;
+  gap: 10px;
+}
+.container__block .payments__dropDown-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.container__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.container__title-block .arrow {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.container__title-block .open {
+  transform: rotate(180deg);
+}
+.container__title-block p {
+  font: 400 24px "PT Serif";
+  color: #000;
+}/*# sourceMappingURL=Payments.module.css.map */
