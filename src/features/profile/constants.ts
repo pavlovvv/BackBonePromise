@@ -7,8 +7,7 @@ import DeleteIconSrc from "./Tickets/assets/delete-2.svg";
 import JamesSrc from "@/features/profile/SupportTicketsChat/assets/James.svg";
 import EbigailSrc from "@/features/profile/SupportTicketsChat/assets/Ebigail.svg";
 
-import clothes1 from "/Users/max/Desktop/BackBonePromise/src/features/profile/D-Client-Dashboard-Google-reviews/assets/clothes1.svg";
-
+import clothes1 from "@/features/profile/D-Client-Dashboard-Google-reviews/assets/clothes1.svg";
 export const priorityMod: Record<Priority, string> = {
     High: styles['ticket-table__badge--high'],
     Medium: styles['ticket-table__badge--medium'],
