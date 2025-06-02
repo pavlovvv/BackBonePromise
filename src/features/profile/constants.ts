@@ -7,6 +7,7 @@ import DeleteIconSrc from "./Tickets/assets/delete-2.svg";
 import JamesSrc from "@/features/profile/SupportTicketsChat/assets/James.svg";
 import EbigailSrc from "@/features/profile/SupportTicketsChat/assets/Ebigail.svg";
 
+import clothes1 from "@/features/profile/D-Client-Dashboard-Google-reviews/assets/clothes1.svg";
 export const priorityMod: Record<Priority, string> = {
     High: styles['ticket-table__badge--high'],
     Medium: styles['ticket-table__badge--medium'],
@@ -90,18 +91,64 @@ export const products: Product[] = [
 
 export const comments: Comment[] = [
     {
+        imgg: clothes1,
         avatar: JamesSrc,
         author: "James Clarke",
-        role: "Administrator",
-        datetime: "20 Dec 2025 – 09:34 AM",
+        datetime: "10 weeks ago",
         content:
             "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
     },
     {
         avatar: EbigailSrc,
         author: "E. Barrett",
-        datetime: "20 Dec 2025 – 10:34 AM",
+        datetime: "10 weeks ago",
         content:
             "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
     },
+    {
+        imgg: clothes1,
+        avatar: JamesSrc,
+        author: "James Clarke",
+        datetime: "10 weeks ago",
+        content:
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    },
+    {
+        avatar: EbigailSrc,
+        author: "E. Barrett",
+        datetime: "10 weeks ago",
+        content:
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+    },
+    {
+        avatar: JamesSrc,
+        author: "James Clarke",
+        datetime: "10 weeks ago",
+        content:
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    },
+    {
+        imgg: clothes1,
+        avatar: EbigailSrc,
+        author: "E. Barrett",
+        datetime: "10 weeks ago",
+        content:
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+    },
+    {
+        avatar: JamesSrc,
+        author: "James Clarke",
+        datetime: "10 weeks ago",
+        content:
+            "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+    },
+    {
+        imgg: clothes1,
+        avatar: EbigailSrc,
+        author: "E. Barrett",
+        datetime: "10 weeks ago",
+        content:
+            "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
+    },
+    
 ]

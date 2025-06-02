@@ -1,0 +1,111 @@
+.comments {
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 714px;
+  width: 100%;
+  color: #1D1D1F;
+}
+.comments__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  gap: 8px;
+  width: 300px;
+  justify-content: space-between;
+}
+.comments__headerTitle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+  align-items: center;
+}
+.comments__headerTitle .dateTime {
+  font-size: 12px;
+  color: #92A1A8;
+}
+.comments__content {
+  margin-left: 38px;
+  margin-bottom: 16px;
+}
+.comments__clothes {
+  margin-left: 38px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 16px;
+}
+.comments__star {
+  margin-bottom: 16px;
+}
+.comments h3 {
+  padding-left: 12px;
+}
+.comments__el {
+  width: 100%;
+  border-radius: 2px 8px 8px 2px;
+  color: #1D1D1F;
+  position: relative;
+  margin-bottom: 8px;
+}
+.comments__el > div:first-child {
+  display: flex;
+}
+.comments__el > div:nth-child(2) {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #1D1D1F;
+  margin-left: 38px;
+}
+.comments__el-reply {
+  width: 75px;
+  height: 32px;
+  border: 1px solid #ED805B;
+  background: #ffccbc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #1D1D1F;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  margin-left: 38px;
+}
+.comments__el:not(:first-of-type) {
+  margin-bottom: 24px;
+}
+.comments__leave {
+  margin: 16px 0 16px 12px;
+}
+.comments__input {
+  width: 100%;
+  min-height: 104px;
+  padding: 16px;
+  font-size: 18px;
+  line-height: 150%;
+  color: #1D1D1F;
+  background-color: #FFFFFF;
+  border: 1px solid #C6D4DB;
+  border-radius: 8px;
+  resize: vertical;
+  outline: none;
+}
+.comments__input::-moz-placeholder {
+  color: #92A1A8;
+}
+.comments__input::placeholder {
+  color: #92A1A8;
+}
+.comments__input:focus {
+  border-color: #C6D4DB;
+  box-shadow: 0 0 0 2px rgba(198, 212, 219, 0.5);
+}
+.comments__bottom {
+  display: flex;
+  justify-content: flex-end;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  align-items: center;
+}/*# sourceMappingURL=CommentItem.module.css.map */

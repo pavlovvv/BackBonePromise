@@ -5,12 +5,20 @@
     { "path": "./tsconfig.node.json" }
   ],
   "compilerOptions": {
+    "jsx": "react-jsx",
     "composite": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "declaration": true,
+    "isolatedModules": true,
+    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
       "@/*":       ["src/*"],
       "@components/*": ["src/components/*"],
     }
-  }
+  },
+
+  
+  
 }

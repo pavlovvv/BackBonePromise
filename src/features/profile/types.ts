@@ -50,4 +50,5 @@ export interface Comment {
     role?: string
     datetime: string
     content: string
+    imgg?: string
 }
