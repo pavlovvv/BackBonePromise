@@ -13,6 +13,7 @@ import PasswordPopupsContainer from "./components/common/popUp/popUp_Password/Pa
 import { AddressPage } from "./components/common/popUp/popUp_Address/AddressPage.tsx";
 import { PaymentPage } from "./components/common/popUp/popUp_AddPaymentMethod/PaymentPage.tsx";
 import D_Client_Profile_settings from "./features/profile/D-Client-Profile settings/Root/D-Client-Profile-settings.tsx";
+import D_Client_Dashboard_Google_reviews from "../src/features/profile/D-Client-Dashboard-Google-reviews/Root/D-Client-Dashboard-Google-reviews.tsx"
 function App() {
   return (
     <Router>
@@ -38,6 +39,7 @@ function App() {
         <Route path="/profile/tickets/PasswordPopupsContainer" element={<PasswordPopupsContainer/>} />
         <Route path="/profile/tickets/AddressPage" element={<AddressPage/>} />
         <Route path="/profile/tickets/PaymentPage" element={<PaymentPage/>} />
+        <Route path="/profile/tickets/D_Client_Dashboard_Google_reviews" element={<D_Client_Dashboard_Google_reviews/>} />
 
 
         <Route
