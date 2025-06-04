@@ -19,6 +19,14 @@
 }
 
 .MuiCardContent-root {
+  padding: 0 !important;
+}
+
+.recharts-wrapper {
+  height: auto !important;
+}
+
+.MuiCardContent-root {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -89,9 +97,8 @@
   height: 20px !important;
 }
 
-.recharts-wrapper {
-  height: 300px !important;
-  max-height: 500px !important;
+.MuiPaper-root {
+  padding: 24px !important;
 }
 
 .recharts-cartesian-axis-line, .MuiChartsAxis-line, .MuiChartsAxis-tick,
@@ -129,6 +136,10 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+.body-container .recharts-wrapper {
+  height: 300px !important;
+  max-height: 500px !important;
 }
 .body-container p, .body-container h3, .body-container h2 {
   color: black;

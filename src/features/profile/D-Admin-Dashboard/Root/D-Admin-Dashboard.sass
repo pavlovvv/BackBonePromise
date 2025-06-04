@@ -201,7 +201,11 @@
     height: 100% !important
   
 
-
+//CallsChart
+.MuiCardContent-root
+  padding: 0 !important 
+.recharts-wrapper
+  height: auto !important
 // === Card Content ===
 .MuiCardContent-root 
   display: flex
@@ -283,12 +287,14 @@
   fill: rgb(0 0 0) !important
   width: 20px !important
   height: 20px !important
-
+//.MuiPaper-root
+.MuiPaper-root
+  padding: 24px !important
 
 // === Recharts ===
-.recharts-wrapper 
-  height: 300px !important
-  max-height: 500px !important
+// .recharts-wrapper 
+//   height: 300px !important
+//   max-height: 500px !important
 
 
 .recharts-cartesian-axis-line,.MuiChartsAxis-line,.MuiChartsAxis-tick,
@@ -326,6 +332,9 @@
     display: flex
     flex-direction: column
     gap: 20px
+    .recharts-wrapper 
+      height: 300px !important
+      max-height: 500px !important
     p, h3,h2
         color: black
     .section_statistics
