@@ -1,0 +1,191 @@
+.MuiTabs-list {
+  justify-content: start !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  width: 100%;
+}
+.container__block {
+  width: 100%;
+}
+.container__block .tabs-panel {
+  margin-bottom: 32px;
+  border-bottom: 1px solid grey;
+}
+.container__block .tabs-panel__block {
+  display: flex;
+  justify-content: start !important;
+}
+.container__block .tabs-panel__block :global(.MuiTabs-list) {
+  display: flex;
+  gap: 5px;
+}
+.container__block .tabs-panel__block :global(.MuiTabs-list) button {
+  padding: 0 !important;
+}
+.container__block .tabs-panel__title {
+  font: 400 18px "Open Sans";
+  text-transform: none !important;
+}
+.container__block .tabs-content {
+  background: #fff;
+  border-radius: 10px;
+}
+.container__block .tabs-content__hint .green {
+  color: #3aa76d;
+}
+.container__block .tabs-content__body {
+  height: 100%;
+}
+.container__block .tabs-content__photo-block {
+  display: flex;
+  justify-content: center;
+}
+.container__block .tabs-content__block {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100% !important;
+  justify-content: space-between;
+  padding: 24px;
+}
+.container__block .tabs-content__info-title {
+  font: 400 18px "Open Sans";
+  color: #1D1D1F;
+  margin-bottom: 16px;
+}
+.container__block .tabs-content__info-title span {
+  color: grey;
+}
+.container__block .tabs-content__info-text--margin-bottom {
+  margin-bottom: 16px;
+}
+.container__block .tabs-content__info-text--margin-bottom p {
+  font: 400 18px "Open Sans";
+}
+.container__block .tabs-content__checkbox-block {
+  display: flex;
+  gap: 12px;
+}
+.container__block .tabs-content__checkbox-block input {
+  width: 20px;
+  height: 20px;
+}
+.container__block .tabs-content__checkbox-block label {
+  font: 400 14px "Open Sans";
+  color: #000;
+}
+.container__block .tabs-content__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: space-between;
+}
+.container__block .tabs-content__info-text {
+  height: 60px;
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid #ccd5db;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  font: 400 18px "Open Sans";
+}
+.container__block .tabs-content__info-text textarea {
+  border: none;
+  outline: none;
+  width: 100%;
+  resize: none;
+  height: auto;
+}
+.container__block .tabs-content__info-text input, .container__block .tabs-content__info-text textarea, .container__block .tabs-content__info-text p {
+  background: none;
+  outline: none;
+  width: 100%;
+}
+.container__block .tabs-content__info-text input:disabled {
+  color: #000;
+}
+.container__block .tabs-content__button-block button {
+  background-color: #f47c51;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 16px;
+  align-self: flex-end;
+  cursor: pointer;
+  font: 400 18px "Open Sans";
+  white-space: nowrap;
+}
+.container__block .tabs-content__info-text--spaced {
+  height: auto;
+  width: 100%;
+  max-width: none;
+}
+.container :global(.MuiTabs-indicator) {
+  background-color: #000000 !important;
+  bottom: -1.5px !important;
+}
+.container :global(.MuiTabs-root) {
+  overflow: visible !important;
+}
+.container :global(.MuiTabs-scroller) {
+  overflow: visible !important;
+}
+.container :global(.MuiBox-root) {
+  width: 40%;
+  padding: 0 !important;
+}
+.container :global(.Mui-selected) {
+  color: #000 !important;
+}
+
+.hours__title-block {
+  margin-bottom: 24px;
+}
+.hours__title-block p {
+  font: 700 18px "Open Sans";
+}
+.hours__info-block {
+  display: flex;
+  gap: 63px;
+}
+.hours__days, .hours__time {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.hours__days p, .hours__time p {
+  font: 400 18px "Open Sans";
+}
+
+.list__block {
+  margin-bottom: 24px;
+}
+.list__block p {
+  font: 700 18px "Open Sans";
+  margin-bottom: 16px;
+}
+.list__block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.list__block li {
+  font: 400 18px "Open Sans";
+  color: black;
+  list-style-type: disc;
+  margin-left: 30px;
+  padding-left: 5px;
+}
+.list__block li::marker {
+  font-size: 15px;
+}
+.list__text--disabled {
+  color: grey !important;
+}/*# sourceMappingURL=TabPanel.module.css.map */

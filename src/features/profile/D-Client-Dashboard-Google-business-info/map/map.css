@@ -1,0 +1,7 @@
+.mapboxgl-ctrl-bottom-left ,.mapboxgl-ctrl-bottom-right{
+    display: none !important
+
+}
+a.mapboxgl-ctrl-logo{
+    display: none !important
+}

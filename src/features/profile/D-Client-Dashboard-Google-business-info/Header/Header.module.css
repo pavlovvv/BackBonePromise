@@ -1,0 +1,54 @@
+.timezone {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  width: 100%;
+}
+.timezone__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.timezone__block {
+  display: flex;
+  gap: 47px;
+  align-items: center;
+}
+.timezone__title p {
+  font: 400 14px "Open Sans";
+  color: #000;
+}
+.timezone__selectWrapper {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: 378px;
+}
+.timezone__select {
+  width: 100%;
+  border-radius: 10px !important;
+  padding: 12px 12px 12px 16px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+}
+.timezone :global(.MuiSelect-select) {
+  padding: 0;
+  font-weight: 400;
+}
+.timezone :global(.MuiSvgIcon-root) {
+  display: none;
+}
+.timezone :global(.MuiSelect-icon) {
+  transition: transform 300ms ease;
+  right: 16px;
+  top: calc(50% - 12px);
+  position: absolute;
+  pointer-events: none;
+}
+.timezone :global(.MuiSelect-icon.MuiSelect-iconOpen) {
+  transform: rotate(180deg);
+}
+.timezone :global(.MuiOutlinedInput-notchedOutline) {
+  display: none !important;
+}/*# sourceMappingURL=Header.module.css.map */
