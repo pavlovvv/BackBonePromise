@@ -53,7 +53,7 @@ export default function CallsChart({ number, text }: CallsChartProps) {
 						<CartesianGrid strokeDasharray="3 3" vertical={true} horizontal={false} />
 						<XAxis
                             width={40}
-							padding={{ left: 20, right: 20 }}
+							
 							dataKey="month"
 							tick={{ fill: "#9E9E9E", fontSize: 12 }}
 						/>
