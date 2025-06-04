@@ -59,15 +59,16 @@ export const revenueData: RevenueData = {
 };
 
 export const donutChartData: DataEntry[] = [
-    { name: 'The debut', value: 27, color: '#6CAFC6' },
-    { name: 'The atelier', value: 49, color: '#EDCE54' },
-    { name: 'The runway', value: 24, color: '#EF4D56' },
+    { name: 'The debut', value: 27, color: '#6CAFC6', people: 212112  },
+    { name: 'The atelier', value: 49, color: '#EDCE54', people: 212112  },
+    { name: 'The runway', value: 24, color: '#EF4D56' , people: 212112 },
 ];
 
 export const donutChartDataOrders: DataEntry[] = [
-    { name: 'The debut', value: 27, color: '#49AB3A' },
-    { name: 'The atelier', value: 49, color: '#EDCE54' },
-    { name: 'The runway', value: 24, color: '#EF4D56' },
+    { name: 'Google Search - mobile', value: 49, color: '#D9D9D9' , people: 212112 },
+    { name: 'Google Search - desktop', value: 17, color: '#49AB3A' , people: 5112},
+    { name: 'Google Maps - mobile', value: 24, color: '#EF4D56', people: 99 },
+    { name: 'Google Maps - desktop', value: 5, color: '#EDCE54', people: 2552 },
 ];
 
 

@@ -29,6 +29,7 @@ export interface DataEntry {
     name: string;
     value: number;
     color: string;
+    people?: number
 }
 
 export type Language = 'EN' | 'UA' | 'DE';

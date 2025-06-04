@@ -15,6 +15,7 @@ import { PaymentPage } from "./components/common/popUp/popUp_AddPaymentMethod/Pa
 import D_Client_Profile_settings from "./features/profile/D-Client-Profile settings/Root/D-Client-Profile-settings.tsx";
 import D_Client_Dashboard_Google_reviews from "../src/features/profile/D-Client-Dashboard-Google-reviews/Root/D-Client-Dashboard-Google-reviews.tsx"
 import D_Client_Dashboard_Google_business_info from '../src/features/profile/D-Client-Dashboard-Google-business-info/Root/D-Client-Dashboard-Google-business-info.tsx'
+import D_Client_Dashboard_Google_performance from "./features/profile/D-Client-Dashboard-Google-performance/Root/D-Client-Dashboard-Google-performance.tsx";
 function App() {
   return (
     <Router>
@@ -42,6 +43,7 @@ function App() {
         <Route path="/profile/tickets/PaymentPage" element={<PaymentPage/>} />
         <Route path="/profile/tickets/D_Client_Dashboard_Google_reviews" element={<D_Client_Dashboard_Google_reviews/>} />
         <Route path="/profile/tickets/D_Client_Dashboard_Google_business_info" element={<D_Client_Dashboard_Google_business_info/>} />
+        <Route path="/profile/tickets/D_Client_Dashboard_Google_performance" element={<D_Client_Dashboard_Google_performance/>} />
 
 
         <Route
