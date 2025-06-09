@@ -97,10 +97,6 @@
   height: 20px !important;
 }
 
-.MuiPaper-root {
-  padding: 24px !important;
-}
-
 .recharts-cartesian-axis-line, .MuiChartsAxis-line, .MuiChartsAxis-tick,
 .recharts-cartesian-axis-tick-line {
   display: none !important;
