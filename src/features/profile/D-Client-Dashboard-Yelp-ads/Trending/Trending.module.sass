@@ -1,0 +1,83 @@
+
+.Trending
+    width: 50%
+    height: 527px
+    
+    &__container
+        height: 100%
+    .statistics
+        display: flex
+        width: 100%
+        justify-content: space-between
+        gap: 16px
+        height: 100%
+        &__info-block
+            display: flex
+            border-bottom: 1.5px solid transparent
+            border-image: repeating-linear-gradient(to right, #c1c1c1 0 10px, transparent 10px 18px)
+            border-image-slice: 1
+            border-top: 1.5px solid transparent
+            border-image: repeating-linear-gradient(to right, #c1c1c1 0 10px, transparent 10px 18px)
+            border-image-slice: 1
+            
+        &__info
+            padding: 16px 0 16px 0
+            flex: 1
+            display: flex
+            flex-direction: column
+            gap: 8px
+            text-align: center
+            p:first-child
+                font: 400 14px 'Open Sans'
+            p:last-child
+                font: 700 24px 'Open Sans'
+        &__info:nth-child(2)
+            border-left: 1.5px solid transparent
+            border-image: repeating-linear-gradient(to bottom, #c1c1c1 0 10px, transparent 10px 18px)
+            border-image-slice: 1
+            border-right: 1.5px solid transparent
+            border-image: repeating-linear-gradient(to bottom, #c1c1c1 0 10px, transparent 10px 18px)
+            border-image-slice: 1
+
+
+        &__main-block
+            display: flex
+            flex-direction: column
+            gap: 16px
+            overflow: scroll
+            padding-right: 40px
+        &__block
+            flex: 1
+            padding: 24px
+            background: rgb(255, 255, 255)
+            border-radius: 10px
+            display: flex
+            flex-direction: column
+            gap: 16px
+        &__title-block
+            
+            display: flex
+            flex-direction: column
+            gap: 16px
+            p
+                font: 700 14px 'Open Sans'
+            p:last-child
+                font-weight: 400
+                color: #92A1A8
+            
+        &__rate
+            display: flex
+            gap: 16px
+            .title
+                font: 400 14px 'Open Sans'
+            .reviews
+                font: 400 14px 'Open Sans'
+                color: grey
+     
+        
+
+
+
+
+
+    
