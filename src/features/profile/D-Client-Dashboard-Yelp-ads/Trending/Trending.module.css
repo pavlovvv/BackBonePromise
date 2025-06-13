@@ -1,0 +1,86 @@
+.Trending {
+  width: 50%;
+  height: 527px;
+}
+.Trending__container {
+  height: 100%;
+}
+.Trending .statistics {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 16px;
+  height: 100%;
+}
+.Trending .statistics__info-block {
+  display: flex;
+  border-bottom: 1.5px solid transparent;
+  -o-border-image: repeating-linear-gradient(to right, #c1c1c1 0 10px, transparent 10px 18px);
+     border-image: repeating-linear-gradient(to right, #c1c1c1 0 10px, transparent 10px 18px);
+  border-image-slice: 1;
+  border-top: 1.5px solid transparent;
+  border-image: repeating-linear-gradient(to right, #c1c1c1 0 10px, transparent 10px 18px);
+  border-image-slice: 1;
+}
+.Trending .statistics__info {
+  padding: 16px 0 16px 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: center;
+}
+.Trending .statistics__info p:first-child {
+  font: 400 14px "Open Sans";
+}
+.Trending .statistics__info p:last-child {
+  font: 700 24px "Open Sans";
+}
+.Trending .statistics__info:nth-child(2) {
+  border-left: 1.5px solid transparent;
+  -o-border-image: repeating-linear-gradient(to bottom, #c1c1c1 0 10px, transparent 10px 18px);
+     border-image: repeating-linear-gradient(to bottom, #c1c1c1 0 10px, transparent 10px 18px);
+  border-image-slice: 1;
+  border-right: 1.5px solid transparent;
+  border-image: repeating-linear-gradient(to bottom, #c1c1c1 0 10px, transparent 10px 18px);
+  border-image-slice: 1;
+}
+.Trending .statistics__main-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: scroll;
+  padding-right: 40px;
+}
+.Trending .statistics__block {
+  flex: 1;
+  padding: 24px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.Trending .statistics__title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.Trending .statistics__title-block p {
+  font: 700 14px "Open Sans";
+}
+.Trending .statistics__title-block p:last-child {
+  font-weight: 400;
+  color: #92A1A8;
+}
+.Trending .statistics__rate {
+  display: flex;
+  gap: 16px;
+}
+.Trending .statistics__rate .title {
+  font: 400 14px "Open Sans";
+}
+.Trending .statistics__rate .reviews {
+  font: 400 14px "Open Sans";
+  color: grey;
+}/*# sourceMappingURL=Trending.module.css.map */

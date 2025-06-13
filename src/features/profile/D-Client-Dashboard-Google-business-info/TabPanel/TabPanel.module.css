@@ -93,6 +93,8 @@
   padding: 16px;
   display: flex;
   align-items: center;
+}
+.container__block .tabs-content__info-text input, .container__block .tabs-content__info-text span, .container__block .tabs-content__info-text p, .container__block .tabs-content__info-text textarea {
   font: 400 18px "Open Sans";
 }
 .container__block .tabs-content__info-text textarea {
