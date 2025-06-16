@@ -1,0 +1,131 @@
+$error: #EF4D56;
+$warning: #EDCE54;
+$success: #49AB3A;
+$info: #6CAFC6;
+$grey: #92A1A8;
+
+.wrapper {
+  padding: 24px 40px 24px;
+  width: 100%;
+  max-width: 1234px;
+
+  & > section {
+    padding: 32px 24px 24px 24px;
+    border-radius: 8px;
+    background-color: #E6EFF3;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    color: #1D1D1F;
+    padding-bottom: 16px;
+    font-family: "PT serif", serif;
+  }
+}
+
+
+.main {
+  display: flex;
+  column-gap: 16px;
+  padding-top: 16px;
+  align-items: flex-start;
+}
+
+.details {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  min-width: 376px;
+
+  &__inner {
+    & > div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 150%;
+      color: #1D1D1F;
+    }
+
+    & > div:not(:last-child) {
+      padding-bottom: 16px;
+    }
+  }
+}
+
+.create {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 714px;
+  width: 100%;
+  color: #1D1D1F;
+
+  &__input {
+    width: 100%;
+    padding: 16px;
+    font-size: 18px;
+    line-height: 150%;
+    color: #1D1D1F;
+    background-color: #FFFFFF;
+    border: 1px solid #C6D4DB;
+    border-radius: 8px;
+    resize: vertical;
+    outline: none;
+    min-height: 59px;
+
+    &::placeholder {
+      color: #92A1A8;
+    }
+
+    &:focus {
+      border-color: #C6D4DB;
+      box-shadow: 0 0 0 2px rgba(198, 212, 219, 0.5);
+    }
+
+    &_big {
+      height: 203px;
+    }
+
+    &_small {
+      font-weight: 700;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    padding-bottom: 10px;
+
+    label {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+      color: #1D1D1F;
+      display: block;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__item:last-of-type {
+    padding-bottom: 16px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+
+    & > div {
+      width: 100%;
+    }
+
+    & > div:nth-child(2) button {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}

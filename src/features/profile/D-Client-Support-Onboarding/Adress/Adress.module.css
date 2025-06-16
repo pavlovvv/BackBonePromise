@@ -1,0 +1,69 @@
+.onboarding-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.onboarding-container__block {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+}
+.onboarding-container__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease;
+  transition-delay: 0.3s;
+}
+.onboarding-container__title p {
+  font: 400 24px "PT Serif";
+  color: #000;
+}
+.onboarding-container__title:hover {
+  cursor: pointer;
+}
+.onboarding-container__wrraper {
+  display: flex;
+  gap: 10px;
+}
+.onboarding-container__wrraper p {
+  font: 400 14px "Open Sans";
+  color: #92A1A8;
+}
+.onboarding-container__arrow {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.onboarding-container__arrow--open {
+  transform: rotate(180deg);
+}
+.onboarding-container img {
+  margin-right: 8px;
+}
+.onboarding-container .onboarding__dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.onboarding-container .onboarding__wrraper {
+  color: black;
+  font: 400 18px "Open Sans";
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.onboarding-container .onboarding__wrraper input {
+  height: 20px;
+  width: 20px;
+}
+.onboarding-container .onboarding__wrraper input:hover {
+  cursor: pointer;
+}
+.onboarding-container .onboarding__wrraper span {
+  font-weight: 700;
+}/*# sourceMappingURL=Adress.module.css.map */

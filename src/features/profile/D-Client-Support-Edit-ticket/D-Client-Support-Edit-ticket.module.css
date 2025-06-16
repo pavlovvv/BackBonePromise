@@ -1,0 +1,111 @@
+.wrapper {
+  padding: 24px 40px 24px;
+  width: 100%;
+  max-width: 1234px;
+}
+.wrapper > section {
+  padding: 32px 24px 24px 24px;
+  border-radius: 8px;
+  background-color: #E6EFF3;
+}
+.wrapper h3 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  color: #1D1D1F;
+  padding-bottom: 16px;
+  font-family: "PT serif", serif;
+}
+
+.main {
+  display: flex;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  padding-top: 16px;
+  align-items: flex-start;
+}
+
+.details {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  min-width: 376px;
+}
+.details__inner > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #1D1D1F;
+}
+.details__inner > div:not(:last-child) {
+  padding-bottom: 16px;
+}
+
+.create {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  max-width: 714px;
+  width: 100%;
+  color: #1D1D1F;
+}
+.create__input {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  line-height: 150%;
+  color: #1D1D1F;
+  background-color: #FFFFFF;
+  border: 1px solid #C6D4DB;
+  border-radius: 8px;
+  resize: vertical;
+  outline: none;
+  min-height: 59px;
+}
+.create__input::-moz-placeholder {
+  color: #92A1A8;
+}
+.create__input::placeholder {
+  color: #92A1A8;
+}
+.create__input:focus {
+  border-color: #C6D4DB;
+  box-shadow: 0 0 0 2px rgba(198, 212, 219, 0.5);
+}
+.create__input_big {
+  height: 203px;
+}
+.create__input_small {
+  font-weight: 700;
+}
+.create__item {
+  width: 100%;
+  padding-bottom: 10px;
+}
+.create__item label {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #1D1D1F;
+  display: block;
+  margin-bottom: 16px;
+}
+.create__item:last-of-type {
+  padding-bottom: 16px;
+}
+.create__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+.create__bottom > div {
+  width: 100%;
+}
+.create__bottom > div:nth-child(2) button {
+  margin-right: 0;
+  margin-left: auto;
+}/*# sourceMappingURL=D-Client-Support-Edit-ticket.module.css.map */
