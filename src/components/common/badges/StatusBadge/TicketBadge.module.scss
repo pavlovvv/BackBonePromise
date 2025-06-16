@@ -1,32 +1,35 @@
-$error: #EF4D56;
-$warning: #EDCE54;
-$success: #49AB3A;
-$info: #6CAFC6;
+$error: #ef4d56;
+$warning: #edce54;
+$success: #49ab3a;
+$info: #6cafc6;
 
 .ticket-status {
-  width: 112px;
-  height: 37px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100px;
-  border: 1px solid $success;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
+	width: 112px;
+	height: 37px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100px;
+	border: 1px solid $success;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 150%;
 
-  &_in-progress {
-    color: $info;
-    border: 1px solid $info;
-  }
+	&_in-progress {
+		color: $info;
+		border: 1px solid $info;
+	}
 
-  &_open {
-    color: $success;
-    border: 1px solid $success;
-  }
+	&_open {
+		color: $success;
+		border: 1px solid $success;
+	}
 
-  &_close {
-    color: $error;
-    border: 1px solid $error;
-  }
+	&_close {
+		color: $error;
+		border: 1px solid $error;
+	}
+}
+:global(.MuiSelect-root) {
+	border: none !important;
 }
