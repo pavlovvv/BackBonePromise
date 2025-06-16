@@ -19,6 +19,7 @@ import D_Client_Dashboard_Google_performance from "./features/profile/D-Client-D
 import D_Client_Dashboard_Yelp_overview from "./features/profile/D-Client-Dashboard-Yelp-overview/Root/D-Client-Dashboard-Yelp-overview.tsx";
 import D_Client_Dashboard_Yelp_ads from "./features/profile/D-Client-Dashboard-Yelp-ads/Root/D-Client-Dashboard-Yelp-ads.tsx";
 import D_Client_Support_Onboarding from "./features/profile/D-Client-Support-Onboarding/Root/D-Client-Support-Onboarding.tsx";
+import D_Client_Support_Edit_ticket from "./features/profile/D-Client-Support-Edit-ticket/D-Client-Support-Edit-ticket.tsx";
 
 function App() {
 	return (
@@ -75,6 +76,10 @@ function App() {
 					element={<D_Client_Support_Onboarding />}
 				/>
 
+				<Route
+					path="/profile/tickets/D_Client_Support_Edit_ticket"
+					element={<D_Client_Support_Edit_ticket />}
+				/>
 				<Route path="/profile/tickets/create" element={<SupportCreateTicket />} />
 			</Routes>
 			/
