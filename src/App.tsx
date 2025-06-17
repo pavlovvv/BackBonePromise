@@ -20,6 +20,7 @@ import D_Client_Dashboard_Yelp_overview from "./features/profile/D-Client-Dashbo
 import D_Client_Dashboard_Yelp_ads from "./features/profile/D-Client-Dashboard-Yelp-ads/Root/D-Client-Dashboard-Yelp-ads.tsx";
 import D_Client_Support_Onboarding from "./features/profile/D-Client-Support-Onboarding/Root/D-Client-Support-Onboarding.tsx";
 import D_Client_Support_Edit_ticket from "./features/profile/D-Client-Support-Edit-ticket/D-Client-Support-Edit-ticket.tsx";
+import D_Client_Support_FAQ from "./features/profile/D-Client-Support-FAQ/Root/D-Client-Support-FAQ.tsx";
 
 function App() {
 	return (
@@ -51,6 +52,10 @@ function App() {
 				/>
 				<Route path="/profile/tickets/AddressPage" element={<AddressPage />} />
 				<Route path="/profile/tickets/PaymentPage" element={<PaymentPage />} />
+				<Route
+					path="/profile/tickets/D_Client_Support_FAQ"
+					element={<D_Client_Support_FAQ />}
+				/>
 				<Route
 					path="/profile/tickets/D_Client_Dashboard_Google_reviews"
 					element={<D_Client_Dashboard_Google_reviews />}
