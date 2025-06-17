@@ -1,0 +1,82 @@
+.onboarding-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.onboarding-container__block {
+  width: 100%;
+}
+.onboarding-container__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.onboarding-container__title p {
+  font: 400 24px "PT Serif";
+  color: #000;
+}
+.onboarding-container__title:hover {
+  cursor: pointer;
+}
+.onboarding-container__wrraper {
+  display: flex;
+  gap: 10px;
+}
+.onboarding-container__wrraper p {
+  font: 700 18px "Open Sans";
+}
+.onboarding-container__arrow {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.onboarding-container__arrow--open {
+  transform: rotate(180deg);
+}
+.onboarding-container img {
+  margin-right: 8px;
+}
+.onboarding-container .onboarding {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.onboarding-container .onboarding__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.onboarding-container .onboarding__block {
+  display: flex;
+  gap: 10px;
+}
+.onboarding-container .onboarding__block p {
+  font: 700 18px "Open Sans";
+}
+.onboarding-container .onboarding__dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.onboarding-container .onboarding__wrraper {
+  font: 400 18px "Open Sans";
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.onboarding-container .onboarding__wrraper input {
+  height: 20px;
+  width: 20px;
+}
+.onboarding-container .onboarding__wrraper input:hover {
+  cursor: pointer;
+}
+.onboarding-container .onboarding__wrraper span {
+  font-weight: 700;
+}/*# sourceMappingURL=Adress.module.css.map */

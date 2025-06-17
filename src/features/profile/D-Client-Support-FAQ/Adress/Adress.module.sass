@@ -1,0 +1,86 @@
+.onboarding-container
+    display: flex
+    flex-direction: column
+    gap: 16px
+    
+    
+    &__block
+        width: 100%
+
+    &__title
+        display: flex
+        align-items: center
+        gap: 10px
+
+
+        p
+            font: 400 24px 'PT Serif'
+            color: #000
+    &__title:hover
+        cursor: pointer
+    &__wrraper
+        display: flex
+        gap: 10px
+        p
+            font: 700 18px 'Open Sans'
+    
+
+    &__arrow
+        width: 24px
+        height: 24px
+        cursor: pointer
+        transition: transform 0.3s ease
+
+        &--open
+            transform: rotate(180deg)
+
+ 
+
+    img
+      margin-right: 8px
+    
+    .onboarding
+        background: #fff
+        border-radius: 10px
+        padding: 20px
+        gap: 16px
+        display: flex
+        flex-direction: column
+        &__info
+            display: flex
+            flex-direction: column
+            gap: 16px
+        &__block
+            display: flex
+            gap: 10px
+            p
+                font: 700 18px 'Open Sans'
+        &__dropdown
+            display: flex
+            flex-direction: column
+            gap: 12px
+            overflow: hidden           
+            position: relative 
+        &__wrraper
+            font: 400 18px 'Open Sans'
+            display: flex
+            flex-direction: column
+            gap: 16px
+            input
+                height: 20px
+                width: 20px
+            input:hover
+                cursor: pointer
+            span
+                font-weight: 700
+
+       
+
+  
+
+
+
+
+
+
+
