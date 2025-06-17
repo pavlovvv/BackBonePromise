@@ -1,0 +1,36 @@
+:global(.MuiTabs-indicator) {
+  background-color: #ED805B !important;
+  bottom: -1px !important;
+}
+
+:global(.MuiTabs-root) {
+  overflow: visible !important;
+}
+
+.DashBoardBlock {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+.profileSettingContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.profileSettingContainer__block {
+  max-width: 1234px;
+  width: 100%;
+  padding: 24px 40px 24px;
+}
+.profileSettingContainer__wrapper {
+  padding: 32px 24px 24px 24px;
+  background-color: #E6EFF3;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.profileSettingContainer p, .profileSettingContainer h3, .profileSettingContainer h2 {
+  color: black;
+}/*# sourceMappingURL=D-Client-Support-Onboarding.module.css.map */

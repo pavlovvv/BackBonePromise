@@ -1,0 +1,78 @@
+.onboarding-container
+    display: flex
+    flex-direction: column
+    gap: 16px
+    
+    
+    &__block
+        display: flex
+        flex-direction: column
+        background: #fff
+        border-radius: 10px
+        padding: 20px
+        width: 100%
+
+    &__title
+        display: flex
+        justify-content: space-between
+        align-items: center
+        // margin-bottom: 16px
+        transition: transform 0.3s ease
+        transition-delay: 0.3s
+
+        p
+            font: 400 24px 'PT Serif'
+            color: #000
+    &__title:hover
+        cursor: pointer
+    &__wrraper
+        display: flex
+        gap: 10px
+        p
+            font: 400 14px 'Open Sans'
+            color: #92A1A8
+
+    &__arrow
+        width: 24px
+        height: 24px
+        cursor: pointer
+        transition: transform 0.3s ease
+
+        &--open
+            transform: rotate(180deg)
+
+ 
+
+    img
+      margin-right: 8px
+    
+    .onboarding
+        &__dropdown
+            display: flex
+            flex-direction: column
+            gap: 12px
+            
+        &__wrraper
+            color: black
+            font: 400 18px 'Open Sans'
+            display: flex
+            align-items: center
+            gap: 10px
+            input
+                height: 20px
+                width: 20px
+            input:hover
+                cursor: pointer
+            span
+                font-weight: 700
+
+       
+
+  
+
+
+
+
+
+
+
