@@ -22,7 +22,7 @@ import D_Client_Support_Onboarding from "./features/profile/D-Client-Support-Onb
 import D_Client_Support_Edit_ticket from "./features/profile/D-Client-Support-Edit-ticket/D-Client-Support-Edit-ticket.tsx";
 import D_Client_Support_FAQ from "./features/profile/D-Client-Support-FAQ/Root/D-Client-Support-FAQ.tsx";
 import W_Admin_Services_Catalog from "./features/profile/W-Admin-Services-Catalog/Root/W-Admin-Services-Catalog.tsx";
-
+import Pop_up_Preview_info_admin from "./features/profile/Pop-up-Preview-info-admin/Root/Pop-up-Preview-info-admin.tsx";
 function App() {
 	return (
 		<Router>
@@ -32,6 +32,10 @@ function App() {
 				<Route path="/profile/tickets" element={<Tickets />} />
 				<Route path="/profile/Agent-Dashboard" element={<D_Agent_dashboard />} />
 				<Route path="/profile/Admin_Dashboard" element={<D_Admin_Dashboard />} />
+				<Route
+					path="/profile/Pop_up_Preview_info_admin"
+					element={<Pop_up_Preview_info_admin />}
+				/>
 
 				<Route path="/profile/tickets/chat" element={<SupportTicketsChat />} />
 				<Route
