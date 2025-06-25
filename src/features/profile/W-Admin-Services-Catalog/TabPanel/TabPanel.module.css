@@ -1,0 +1,133 @@
+.catalog__container {
+  background: #fff;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 8px;
+}
+.catalog .header {
+  display: flex;
+  justify-content: space-between;
+}
+.catalog .header__block {
+  display: flex;
+  gap: 26px;
+  align-items: end;
+}
+.catalog .header__block .header__selectWrapper {
+  height: -moz-min-content;
+  height: min-content;
+}
+.catalog .header__block .header__selectWrapper:nth-child(1) {
+  border-bottom: 1px solid black;
+}
+.catalog .header__selectWrapper {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  width: -moz-min-content !important;
+  width: min-content !important;
+  padding-bottom: 4px;
+}
+.catalog .header__select {
+  width: 100%;
+  border-radius: 10px !important;
+  padding: 12px 12px 12px 16px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #1D1D1F;
+  font: 400 14px "Open Sans";
+}
+.catalog .header__select--padding {
+  border-bottom: 1px solid black;
+}
+.catalog .header__select--padding :global(.MuiSelect-icon) {
+  right: 0px !important;
+}
+.catalog .header__select--border {
+  border: none;
+  padding: 0;
+}
+.catalog .header__select--burger :global(.MuiSelect-icon) {
+  right: 0 !important;
+}
+.catalog .header__select--burger :global(.MuiSelect-select) {
+  padding-right: 20px !important;
+}
+.catalog .clothes {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(211px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  gap: 16px;
+}
+.catalog .clothes__block {
+  width: -moz-min-content;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.catalog .clothes__img {
+  width: 211px;
+  height: 196px;
+  background: grey;
+  border-radius: 8px;
+}
+.catalog .clothes__info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.catalog .clothes__size {
+  display: flex;
+  justify-content: space-between;
+  font: 400 14px "Open Sans";
+}
+.catalog .clothes__size p {
+  color: #8D8D8E;
+}
+.catalog .clothes__name p {
+  font: 400 18px "Open Sans";
+}
+.catalog .clothes__stock p {
+  color: #8D8D8E;
+  font: 400 18px "Open Sans";
+}
+.catalog .clothes__prise p {
+  font: 700 18px "Open Sans";
+}
+.catalog .clothes :global(.MuiMenu-list li) {
+  background-color: black !important;
+}
+.catalog :global(.MuiSelect-select) {
+  padding: 0;
+  font: 400 14px "Open Sans" !important;
+}
+.catalog :global(.Mui-selected) {
+  background-color: black !important;
+}
+.catalog :global(.MuiSelect-icon) {
+  top: auto !important;
+  width: 15px !important;
+  height: 15px !important;
+}
+.catalog :global(.MuiSvgIcon-root) {
+  width: 20px !important;
+  height: 20px !important;
+}
+.catalog :global(.MuiSelect-icon) {
+  transition: transform 300ms ease;
+  right: 16px;
+  top: calc(50% - 12px);
+  position: absolute;
+  pointer-events: none;
+}
+.catalog :global(.MuiSelect-icon.MuiSelect-iconOpen) {
+  transform: rotate(180deg);
+}
+.catalog :global(.MuiOutlinedInput-notchedOutline) {
+  display: none !important;
+}/*# sourceMappingURL=TabPanel.module.css.map */

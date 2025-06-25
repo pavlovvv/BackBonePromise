@@ -22,7 +22,7 @@
 .profileSettingContainer__block {
   max-width: 1234px;
   width: 100%;
-  padding: 24px 24px 24px 0 !important;
+  padding: 24px 24px 24px 0;
 }
 .profileSettingContainer__wrapper {
   padding: 32px 24px 24px 24px;
@@ -34,4 +34,4 @@
 }
 .profileSettingContainer p, .profileSettingContainer h3, .profileSettingContainer h2 {
   color: black;
-}/*# sourceMappingURL=D-Client-Profile-settings.module.css.map */
+}/*# sourceMappingURL=W-Admin-Services-Catalog.module.css.map */

@@ -22,7 +22,6 @@
   color: #ef4d56;
   border: 1px solid #ef4d56;
 }
-
-:global(.MuiSelect-root) {
+.ticket-status :global(.MuiSelect-root) {
   border: none !important;
 }/*# sourceMappingURL=TicketBadge.module.css.map */

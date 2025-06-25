@@ -21,6 +21,7 @@ import D_Client_Dashboard_Yelp_ads from "./features/profile/D-Client-Dashboard-Y
 import D_Client_Support_Onboarding from "./features/profile/D-Client-Support-Onboarding/Root/D-Client-Support-Onboarding.tsx";
 import D_Client_Support_Edit_ticket from "./features/profile/D-Client-Support-Edit-ticket/D-Client-Support-Edit-ticket.tsx";
 import D_Client_Support_FAQ from "./features/profile/D-Client-Support-FAQ/Root/D-Client-Support-FAQ.tsx";
+import W_Admin_Services_Catalog from "./features/profile/W-Admin-Services-Catalog/Root/W-Admin-Services-Catalog.tsx";
 
 function App() {
 	return (
@@ -86,6 +87,10 @@ function App() {
 					element={<D_Client_Support_Edit_ticket />}
 				/>
 				<Route path="/profile/tickets/create" element={<SupportCreateTicket />} />
+				<Route
+					path="/profile/tickets/W_Admin_Services_Catalog"
+					element={<W_Admin_Services_Catalog />}
+				/>
 			</Routes>
 			/
 		</Router>

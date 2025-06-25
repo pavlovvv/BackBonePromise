@@ -29,7 +29,7 @@ $info: #6cafc6;
 		color: $error;
 		border: 1px solid $error;
 	}
-}
-:global(.MuiSelect-root) {
-	border: none !important;
+	:global(.MuiSelect-root) {
+		border: none !important;
+	}
 }

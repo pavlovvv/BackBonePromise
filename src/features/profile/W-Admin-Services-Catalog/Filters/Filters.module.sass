@@ -1,0 +1,287 @@
+
+.filter__container::-webkit-scrollbar 
+  width: 14px
+.filter__container::-webkit-scrollbar-track 
+  background: none
+  border-radius: 4px
+
+
+/* Повзунок */
+.filter__container::-webkit-scrollbar-thumb 
+  background-color: #D9D9D9
+  border-radius: 4px
+
+
+/* Повзунок при наведенні */
+.filter__container::-webkit-scrollbar-thumb:hover 
+  background-color: #c4c2c2
+
+
+    
+.filter
+    background: #fff
+    border-radius: 8px
+    padding-right: 10px
+    padding-top: 24px
+    height: 100%
+
+    
+
+    
+    &__container
+        height: 100%
+        max-height: 728px
+        overflow: scroll
+        padding: 0 24px 24px 24px
+        display: flex
+        flex-direction: column
+        gap: 16px
+
+    &__title 
+        .filter__text
+            margin-bottom: 16px
+            font: 400 24px 'PT Serif'
+        div:hover
+            cursor: pointer
+        div
+            display: flex
+            gap: 8px
+            align-items: center
+            p
+                font: 400 14px 'Open Sans'
+                color: grey
+            img
+                width: 13px
+    &__selected-block
+        p
+            font: 400 18px 'Open Sans'
+            // margin-bottom: 8px
+    &__tags
+        display: flex
+        flex-direction: column
+        gap: 8px
+    &__tag
+        background: #EBEBED
+        max-width: 300px
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding: 4px 8px
+        span
+            font: 400 14px 'Open Sans'
+            color: #000
+        img:hover
+            cursor: pointer
+
+    &__selected-value
+    &__main-block
+        display: flex
+        flex-direction: column
+        gap: 16px
+    &__header
+        display: flex
+        cursor: pointer
+        gap: 12px
+        p
+            color: #000
+            font: 400 18px 'Open Sans'
+            
+    :global(.MuiFormControlLabel-root)
+        margin: 0 !important
+        gap: 10px !important
+        padding: 0 !important
+    :global(.MuiCheckbox-root)
+        margin: 0 !important
+        padding: 0 !important
+    :global(.MuiSvgIcon-root)
+        fill: grey !important
+        width: 30px !important
+        height: 30px !important
+    :global(.MuiTypography-root)
+        border: none !important
+    &__checkbox-label
+        font: 400 14px 'Open Sans'
+        color: #000
+    &__checkboxes
+        display: flex
+        flex-direction: column
+        gap: 12px
+    &__wrraper
+        display: flex
+        flex-direction: column
+        gap: 12px
+        
+    &__checkboxes-block
+        display: flex
+        cursor: pointer
+        align-items: center
+        gap: 12px
+        p
+            font: 400 14px 'Open Sans'
+            color: #000
+    
+    &__arrow
+        width: 24px
+        height: 24px
+        cursor: pointer
+        transition: transform 0.3s ease
+        transform: rotate(-90deg)
+
+        &--open
+            transform: rotate(0deg)
+    &__price 
+        display: flex
+        flex-direction: column
+        gap: 16px
+        p 
+            font: 400 18px 'Open Sans'
+    &__price-inputs
+        display: flex
+        align-items: center
+        gap: 8px
+        span
+            font-size: 40px
+            color: black
+        .price
+            width: 100%
+            max-width: 370px
+            &__block
+                border: none
+                padding: 0
+            &__input-block
+                background: #fff
+                height: 52px
+                display: flex
+                align-items: center
+                border: 1px solid #ccd5db
+                border-radius: 8px
+                padding: 8px 16px
+                input
+                    text-align: center
+                    padding-left: 0
+                    font: 400 18px "Open Sans"
+                    border: none
+                    outline: none
+                    flex: 1
+                    padding-left: 8px
+                    width: 100%
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.filte
+    display: flex
+    flex-direction: column
+    gap: 16px
+    
+    
+    &__block
+        width: 100%
+
+    &__title
+        display: flex
+        align-items: center
+        gap: 10px
+
+
+        p
+            font: 400 24px 'PT Serif'
+            color: #000
+    &__title:hover
+        cursor: pointer
+   
+    
+
+    &__arrow
+        width: 24px
+        height: 24px
+        cursor: pointer
+        transition: transform 0.3s ease
+        transform: rotate(-90deg)
+
+        &--open
+            transform: rotate(0deg)
+
+ 
+    
+    .onboarding
+        background: #fff
+        border-radius: 10px
+        padding: 20px
+        gap: 16px
+        display: flex
+        flex-direction: column
+        &__info
+            display: flex
+            flex-direction: column
+            gap: 16px
+        &__block
+            display: flex
+            gap: 10px
+            p
+                font: 700 18px 'Open Sans'
+        &__dropdown
+            display: flex
+            flex-direction: column
+            gap: 12px
+            overflow: hidden           
+            position: relative 
+        &__wrraper
+            font: 400 18px 'Open Sans'
+            display: flex
+            flex-direction: column
+            gap: 16px
+            input
+                height: 20px
+                width: 20px
+            input:hover
+                cursor: pointer
+            span
+                font-weight: 700
+
+       
+
+  
+
+
+
+
+
+
+
