@@ -1,0 +1,35 @@
+.description {
+  background: #EBEBED;
+}
+.description__container {
+  padding: 24px;
+}
+.description__title-block, .description__container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.description__title {
+  font: 700 18px "Open Sans";
+}
+.description__text {
+  font: 400 14px "Open Sans";
+}
+.description__sub-title {
+  font: 700 14px "Open Sans";
+}
+.description__list p {
+  font: 700 14px "Open Sans";
+  margin-bottom: 5px;
+}
+.description__list ol {
+  padding-left: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.description__list li {
+  list-style-type: disc;
+  color: black;
+  font: 400 14px "Open Sans";
+}/*# sourceMappingURL=FullDescription.module.css.map */
