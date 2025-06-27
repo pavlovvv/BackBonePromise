@@ -1,0 +1,62 @@
+.MuiTabs-list
+    justify-content: start !important
+.container
+    display: flex
+    flex-direction: column
+    border-radius: 8px
+    width: 100%
+    padding: 24px
+    background: #fff
+    &__block
+      width: 100%
+      .tabs-panel
+          margin-bottom: 32px
+          // border-bottom: 1px solid grey
+          &__block
+              display: flex
+              justify-content: start !important
+              :global(.MuiTabs-list)
+                  display: flex
+                  gap: 75px
+                  button
+                      padding: 0 !important
+          &__title
+              font: 400 24px 'Open Sans'
+              text-transform: none !important
+            
+       
+      
+    :global(.MuiTabs-indicator)
+        background-color: #ED805B !important
+        bottom: -1.5px !important
+    :global(.MuiTabs-root)
+        overflow: visible !important
+    :global(.MuiTabs-scroller)
+        overflow: visible !important
+    :global(.MuiBox-root)
+        width: 40%
+        padding: 0 !important
+    :global(.Mui-selected)
+        color: #000 !important
+
+.information
+    &__container
+      width: 520px
+      border: 1px solid #92A1A8
+      border-radius: 8px
+    &__block
+      display: flex
+      justify-content: space-between
+      border-bottom: 1px solid #92A1A8
+      div
+        font: 400 18px 'Open Sans'
+        color: black
+        text-align: center
+        width: 100%
+        padding: 20px
+
+      div:first-child
+        background: #FFE5D7
+        text-align: start
+    &__block:last-child
+      border: none
