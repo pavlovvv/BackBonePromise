@@ -1,0 +1,138 @@
+.catalog {
+  width: 100%;
+}
+.catalog__container {
+  display: flex;
+  gap: 32px;
+  display: flex;
+}
+.catalog .clothes {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+}
+.catalog .clothes__wrraper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.catalog .clothes__title {
+  margin-bottom: 32px;
+}
+.catalog .clothes__title p {
+  font: 400 32px "PT Serif";
+}
+.catalog .clothes__price {
+  margin-bottom: 18px;
+}
+.catalog .clothes__price p {
+  font: 700 24px "Open Sans";
+}
+.catalog .clothes__size, .catalog .clothes__color, .catalog .clothes__description {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.catalog .clothes__size {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.catalog .clothes__size p {
+  font: 400 18px "Open Sans";
+}
+.catalog .clothes__size p span {
+  color: grey;
+}
+.catalog .clothes__size--active {
+  background: rgba(237, 128, 91, 0.3019607843);
+}
+.catalog .clothes__size-block {
+  display: flex;
+  gap: 10px;
+}
+.catalog .clothes__size-block div {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #92A1A8;
+  border-radius: 10px;
+  color: black;
+}
+.catalog .clothes__color p {
+  font: 400 18px "Open Sans";
+}
+.catalog .clothes__color p span {
+  color: grey;
+}
+.catalog .clothes__color-block {
+  display: flex;
+  gap: 10px;
+}
+.catalog .clothes__color-block div {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  color: #000;
+  padding: 17px;
+}
+.catalog .clothes__color-block--black {
+  background: black;
+}
+.catalog .clothes__color-block--white {
+  background: grey;
+}
+.catalog .clothes__color-block--active {
+  box-shadow: 0 0 0 2px white, 0 0 0 4px grey;
+}
+.catalog .clothes__availability p {
+  font: 400 18px "Open Sans";
+}
+.catalog .clothes__availability span {
+  color: grey;
+}
+.catalog .clothes__quantity {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+.catalog .clothes__quantity p {
+  font: 400 18px "Open Sans";
+}
+.catalog .clothes__quantity-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid grey;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100px;
+  border-radius: 10px;
+}
+.catalog .clothes__quantity-input--hover:hover {
+  cursor: pointer;
+}
+.catalog .clothes__description--dropDown p {
+  font: 400 14px "Open Sans";
+  line-height: 150%;
+}
+.catalog .clothes__description--title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.catalog .clothes__description--title p {
+  font: 400 18px "Open Sans";
+}
+.catalog .clothes__arrow {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+.catalog .clothes__arrow--open {
+  transform: rotate(0deg);
+}/*# sourceMappingURL=Catalog.module.css.map */

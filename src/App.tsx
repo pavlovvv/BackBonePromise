@@ -24,6 +24,7 @@ import D_Client_Support_FAQ from "./features/profile/D-Client-Support-FAQ/Root/D
 import D_Admin_Services_Catalog from "./features/profile/D-Admin-Services-Catalog/Root/D-Admin-Services-Catalog.tsx";
 import W_Admin_Services_Catalog from "./features/profile/W-Admin-Services-Catalog/Root/W-Admin-Services-Catalog.tsx";
 import Pop_up_Preview_info_admin from "./features/profile/Pop-up-Preview-info-admin/Root/Pop-up-Preview-info-admin.tsx";
+import D_Client_Buy_more_items_Catalog_Product_preview from "./features/profile/D-Client-Buy-more-items-Catalog-Product-preview/Root/D-Client-Buy-more-items-Catalog-Product-preview.tsx";
 import W_Admin_Services_Order_for_items from "./features/profile/W-Admin-Services-Order-for-items/Root/W-Admin-Services-Order-for-items.tsx";
 import D_Admin_Services_Order_for_items from "./features/profile/D-Admin-Services-Order-for-items/Root/D-Admin-Services-Order-for-items.tsx";
 function App() {
@@ -35,6 +36,10 @@ function App() {
 				<Route path="/profile/tickets" element={<Tickets />} />
 				<Route path="/profile/Agent-Dashboard" element={<D_Agent_dashboard />} />
 				<Route path="/profile/Admin_Dashboard" element={<D_Admin_Dashboard />} />
+				<Route
+					path="/profile/D_Client_Buy_more_items_Catalog_Product_preview"
+					element={<D_Client_Buy_more_items_Catalog_Product_preview />}
+				/>
 				<Route
 					path="/profile/D_Admin_Services_Catalog"
 					element={<D_Admin_Services_Catalog />}
