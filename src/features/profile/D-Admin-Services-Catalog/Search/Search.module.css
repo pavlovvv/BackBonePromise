@@ -1,0 +1,25 @@
+.Search {
+  width: 370px;
+  max-width: 370px;
+}
+.Search__block {
+  border: none;
+  padding: 0;
+}
+.Search__input-block {
+  background: #fff;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccd5db;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+.Search__input-block input {
+  padding-left: 0;
+  font: 400 18px "Open Sans";
+  border: none;
+  outline: none;
+  flex: 1;
+  padding-left: 8px;
+}/*# sourceMappingURL=Search.module.css.map */

@@ -1,0 +1,269 @@
+@charset "UTF-8";
+.filter__container::-webkit-scrollbar {
+  width: 14px;
+}
+
+.filter__container::-webkit-scrollbar-track {
+  background: none;
+  border-radius: 4px;
+}
+
+/* Повзунок */
+.filter__container::-webkit-scrollbar-thumb {
+  background-color: #D9D9D9;
+  border-radius: 4px;
+}
+
+/* Повзунок при наведенні */
+.filter__container::-webkit-scrollbar-thumb:hover {
+  background-color: #c4c2c2;
+}
+
+.filter {
+  background: #fff;
+  border-radius: 8px;
+  padding-right: 10px;
+  padding-top: 24px;
+  height: 100%;
+}
+.filter__range-block :global(.MuiBox-root) {
+  display: flex;
+  justify-content: center;
+}
+.filter__range-block :global(.MuiBox-root) :global(.MuiSlider-root) {
+  width: 94% !important;
+}
+.filter__container {
+  height: 100%;
+  max-height: 728px;
+  overflow: scroll;
+  padding: 0 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.filter__title .filter__text {
+  margin-bottom: 16px;
+  font: 400 24px "PT Serif";
+}
+.filter__title div:hover {
+  cursor: pointer;
+}
+.filter__title div {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.filter__title div p {
+  font: 400 14px "Open Sans";
+  color: grey;
+}
+.filter__title div img {
+  width: 13px;
+}
+.filter__selected-block p {
+  font: 400 18px "Open Sans";
+}
+.filter__tags {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.filter__tag {
+  background: #EBEBED;
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 8px;
+}
+.filter__tag span {
+  font: 400 14px "Open Sans";
+  color: #000;
+}
+.filter__tag img:hover {
+  cursor: pointer;
+}
+.filter__main-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.filter__header {
+  display: flex;
+  cursor: pointer;
+  gap: 12px;
+}
+.filter__header p {
+  color: #000;
+  font: 400 18px "Open Sans";
+}
+.filter :global(.MuiFormControlLabel-root) {
+  margin: 0 !important;
+  gap: 10px !important;
+  padding: 0 !important;
+}
+.filter :global(.MuiCheckbox-root) {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.filter :global(.MuiSvgIcon-root) {
+  fill: grey !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+.filter :global(.MuiTypography-root) {
+  border: none !important;
+}
+.filter__checkbox-label {
+  font: 400 14px "Open Sans";
+  color: #000;
+}
+.filter__checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.filter__wrraper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.filter__checkboxes-block {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  gap: 12px;
+}
+.filter__checkboxes-block p {
+  font: 400 14px "Open Sans";
+  color: #000;
+}
+.filter__arrow {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+.filter__arrow--open {
+  transform: rotate(0deg);
+}
+.filter__price {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.filter__price p {
+  font: 400 18px "Open Sans";
+}
+.filter__price-inputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.filter__price-inputs span {
+  font-size: 40px;
+  color: black;
+}
+.filter__price-inputs .price {
+  width: 100%;
+  max-width: 370px;
+}
+.filter__price-inputs .price__block {
+  border: none;
+  padding: 0;
+}
+.filter__price-inputs .price__input-block {
+  background: #fff;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccd5db;
+  border-radius: 8px;
+  padding: 8px 16px;
+}
+.filter__price-inputs .price__input-block input {
+  text-align: center;
+  padding-left: 0;
+  font: 400 18px "Open Sans";
+  border: none;
+  outline: none;
+  flex: 1;
+  padding-left: 8px;
+  width: 100%;
+}
+
+.filte {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.filte__block {
+  width: 100%;
+}
+.filte__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.filte__title p {
+  font: 400 24px "PT Serif";
+  color: #000;
+}
+.filte__title:hover {
+  cursor: pointer;
+}
+.filte__arrow {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  transform: rotate(-90deg);
+}
+.filte__arrow--open {
+  transform: rotate(0deg);
+}
+.filte .onboarding {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.filte .onboarding__info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.filte .onboarding__block {
+  display: flex;
+  gap: 10px;
+}
+.filte .onboarding__block p {
+  font: 700 18px "Open Sans";
+}
+.filte .onboarding__dropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+  position: relative;
+}
+.filte .onboarding__wrraper {
+  font: 400 18px "Open Sans";
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.filte .onboarding__wrraper input {
+  height: 20px;
+  width: 20px;
+}
+.filte .onboarding__wrraper input:hover {
+  cursor: pointer;
+}
+.filte .onboarding__wrraper span {
+  font-weight: 700;
+}/*# sourceMappingURL=Filters.module.css.map */
